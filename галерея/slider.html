@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+<title>Адаптивная галерея изображений</title>
+<link href="https://fonts.googleapis.com/css?family=Roboto:400,500&amp;subset=cyrillic" rel="stylesheet">
+<link href="slider.style.css" rel="stylesheet">
+</head>
+
+<body>
+	<div class="wrap">
+		<h2 class="h2-services">НАШИ УСЛУГИ</h2>
+
+        <hr class="hr-services">
+
+		<div class="gallery" data-setting="setup1">
+			<div class="slider">
+				<div class="stage">
+					<div>
+						<div class="img-services">
+                            <img src="../icons/auto_01.jpeg" alt="auto">
+                        </div>
+                        <div class="active-link">
+                            <h3>Малярные работы</h3>
+                            <p>В зависимости от поставленных задач и состояния покрытия при выполнении малярных работ на автомобиле может производиться локальная покраска, то есть окрашивание небольшого участка площади, или полная покраска отдельного элемента или кузова целиком.</p>
+                        </div>						
+					</div>
+
+					<div class="services-box">
+                        <div class="img-services">
+							<img src="../icons/auto_02.jpeg" alt="auto">
+						</div>
+
+                        <div class="active-link">
+                            <h3>Кузовные работы</h3>
+                            <p>Наши специалисты имеют всю необходимую квалификацию и опыт, позволяющие качественно и в срок произвести необходимые кузовные работы с Вашим автомобилем.</p>
+                        </div>
+                    </div>
+                    <div class="services-box">
+                        <div class="img-services">
+							<img src="../icons/auto_03.jpeg" alt="auto">
+						</div>
+
+                        <div class="active-link">
+                            <h3>Слесарные работы</h3>
+                            <p>Перед ремонтом и обслуживанием Вашего автомобиля, Вы всегда можете запросить у мастера-консультанта предъявить сертификаты, подтверждающие компетентность механиков.</p>
+                        </div>
+                    </div>
+                    <div class="services-box">
+                        <div class="img-services">
+							<img src="../icons/auto_04.jpeg" alt="auto">
+						</div>
+
+                        <div class="active-link">
+                            <h3>Ремонт стекол авто</h3>
+                            <p>В процессе выполнения ремонтных работ сколы на лобовом стекле заполняются полимерным составом. Для сохранения прозрачности, и чтобы минимизировать остаточные явления, подбирается наиболее подходящий по коэффициенту цветового преломления ремонтный материал.</p>
+                        </div>
+                    </div>
+                    <div class="services-box">
+                        <div class="img-services">
+                            <img src="../icons/auto_05.jpeg" alt="auto">
+                        </div>
+                        <div class="active-link">
+                            <h3>Полировка авто</h3>
+                            <p>Погодные явления ежедневно оказывают негативное воздействие на лакокрасочное покрытие кузова – появляются сколы, следы от химических веществ. Даже для нового транспортного средства характерно подвергаться воздействию внешних факторов. Решение – полировка авто специальными средствами устранит налеты, восстановит лакокрасочное покрытие, удалит мелкие царапины лака.</p>
+                        </div>
+                    </div>
+                    <div class="services-box">
+                        <div class="img-services">
+                            <img src="../icons/auto_06.jpeg" alt="auto">
+                        </div>
+                        <div class="active-link">
+                            <h3>Тюнинг и установка обвесов</h3>
+                            <p>Работаем с крупнейшими производителями и поставщиками оригинальных обвесов. Мы очень внимательно подходим к выбору расходников и материалов, и для своих клиентов мы предоставляем комплектующие по договоренности с компаниями-производителями тюнинга автомобилей.</p>
+                        </div>
+                    </div>
+				</div>
+			</div>
+			
+			<div class="control">
+				<div class="nav-ctrl" data-hidden="true">
+					<span class="prev" data-shift="prev">prev</span>
+					<span class="next" data-shift="next">next</span>
+				</div>
+				<ul class="dots-ctrl" data-hidden="true"></ul>
+			</div>
+		</div>
+	</div>
+
+	<script type="text/javascript">
+		const setting = {
+			setup1: {
+				// включаем постраничную навигацию
+				dots: true,
+				// включаем управление с клавиатуры клавишами навигации "вправо / влево"
+				keyControl: true,
+				// настройки галереи в зависимости от разрешения
+				adaptive: {
+					// настройка работает в диапазоне разрешений 320-560px
+					320: {
+						// одновременно выводится 1 элемент
+						visibleItems: 1,
+						// расстояние между изображениями 5px
+						margin: 5,
+						// запрещаем постраничную навигацию
+						dots: false
+					},
+					// настройка работает в диапазоне разрешений 560-768px
+					560: {
+						// одновременно выводится 1 элемент
+						visibleItems: 2,
+						// расстояние между изображениями 5px
+						margin: 5,
+						// запрещаем постраничную навигацию
+						dots: false
+					},
+					// настройка работает в диапазоне разрешений 768-1024px
+					768: {
+						// одновременно выводятся 2 элемента
+						visibleItems: 3,
+					},
+					// настройка работает в диапазоне разрешений 1024 и выше
+					1024: {
+						// одновременно выводятся 3 элемента
+						visibleItems: 4
+					}
+				}
+			},
+			setup2: {
+				// одновременно выводится 4 элемента
+				visibleItems: 4,
+				// разрешаем постраничную навигацию
+				dots: true,
+				// разрешаем управление с клавиатуры клавишами навигации "вправо / влево"
+				keyControl: true,
+				// выключаем адаптивность
+				responsive: false
+			}
+		};
+	</script>
+	<script src="slider.function.js"></script>
+</body>
+</html>

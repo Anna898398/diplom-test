@@ -1,0 +1,158 @@
+@keyframes scroll_move {
+    0% {
+      top: 0;
+    }
+    100% {
+      top: 12px;
+    }
+  }  
+  
+  .short_box {
+    width: 383px;
+    height: 337px;
+    background: #ffffff;
+  }
+      
+  .high_box {
+    width: 383px;
+    height: 692px;
+    background: #ffffff;
+  }
+      
+  .long_box {
+    width: 795px;
+    height: 337px;
+    background: #ffffff;
+    grid-column: 1/2;
+  }
+  
+  .gallery > div {
+    border: 4px solid #BB70B3;
+    z-index: 10;
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+  }
+  
+  .gallery > div img {
+    z-index: -5;
+    width: 100%;
+    height: auto;
+    position: absolute;
+    left: 50%; 
+    top: 50%;
+    transform: translate(-50%, -50%);
+  }
+  
+  .gallery {
+    width: 805px;
+    display: grid;
+    grid-template-columns: repeat(2, 390px);
+    grid-gap: 20px;
+    margin: 0 auto;
+    justify-content: center;
+    margin-top: 50px;
+    margin-bottom: 50px;
+  }
+  
+  .scroll_button {
+    width: 200%;
+    cursor: pointer;
+    grid-column: 1/2;
+    padding: 0 10px 0 10px;
+    position: relative;
+  }
+  
+  .scroll_button:hover {
+    animation-name: scroll_move;
+    animation-duration: 0.5s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-out;
+    animation-direction: alternate;
+  }
+  
+  .mask {
+    width: 100%;
+    height: 100%;
+    background: rgba(176, 155, 174, 0.92);
+    position: absolute;
+    display: none;
+  }
+  
+  .descr {
+    position: absolute;
+    top: 35%;
+    display: none;
+    margin-left: 26px;
+  }
+  
+  .gallery > div:hover .mask {
+    display: block;
+  }
+  .gallery > div:hover .descr {
+    display: block;
+    top: 50%;
+    transform: translate(0%, -50%);
+  }
+  
+  .gallery h2 {
+    font-family: Nunito;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 24px;
+    line-height: 33px;
+    letter-spacing: 0.2em;
+    color: #FFFFFF;
+  }
+  .gallery p {
+    font-family: Nunito;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 11px;
+    line-height: 15px;
+    letter-spacing: 0.2em;
+    color: #F3F3F3;
+    padding-top: 7px;
+  }
+  
+  @media screen and (max-width: 795px) {
+    .gallery {
+      width: 595px;
+      grid-template-columns: 1fr;
+    }
+    .short_box {
+      width: 283px;
+      height: 237px;
+      background: #ffffff;
+    }
+    .high_box {
+      width: 283px;
+      height: 490px;
+      background: #ffffff;
+    }
+    .long_box {
+      width: 595px;
+      height: 237px;
+      background: #ffffff;
+    }
+    .high_box, .long_box, .short_box {
+      grid-column: 1!important;
+      grid-row: auto!important;
+      justify-self: center;
+    }
+    .scroll_button {
+      grid-column: 1;
+      width: 100%;
+      padding: 0;
+    }
+  }
+  
+  @media screen and (max-width: 595px) {
+    .gallery {
+      width: 100%;
+    }
+    .long_box {
+      width: 100%;
+      height: 237px;
+    }
+  }
