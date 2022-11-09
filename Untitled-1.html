@@ -1,162 +1,159 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="Untitled-1.css">
-</head>
-<body>
+    <head>
+        <meta charset="UTF-8">
+        <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.0/jquery.validate.min.js"></script>
 
+        <link rel="stylesheet" href="bootstrap-5.1.3-dist/css/bootstrap.min.css">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+        <link href="examples/libs/bootstrap-5/bootstrap.min.css" rel="stylesheet">   
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
 
+        <link rel="stylesheet" href="fonts/css/all.min.css">
+        
+        <link rel="stylesheet" href="books.css">
+        <link rel="stylesheet" href="slider.style.css">
 
-    <div class="wrap">
-        <h1>Галерея 1 - слайдер</h1>
-        <div class="gallery" data-setting="setup1">
-            <div class="slider">
-                <div class="stage">
-                    <div>
-                        <img src="icons/auto_01.jpeg" alt="">
-                    </div>
-                    <div>
-                        <img src="icons/auto_02.jpeg" alt="">
-                    </div>
-                    <div>
-                        <img src="icons/auto_03.jpeg" alt="">
-                    </div>
-                    <div>
-                        <img src="icons/auto_04.jpeg" alt="">
-                    </div>
-                    <div>
-                        <img src="icons/auto_05.jpeg" alt="">
-                    </div>
-                    <div>
-                        <img src="icons/auto_06.jpeg" alt="">
-                    </div>
-                </div>
-            </div>
-            <div class="control">
-                <div class="nav-ctrl" data-hidden="true">
-                    <span class="prev" data-shift="prev">prev</span>
-                    <span class="next" data-shift="next">next</span>
-                </div>
-                <ul class="dots-ctrl" data-hidden="true"></ul>
-            </div>
-        </div>
-    </div>
+        <title>List Books</title>
+    </head>
+
+    <body>
+        
+        <div class="container-all">
+
+            <!--   Контактная информация -->
+            <header class="info">
+                <ul>
+                    <li class="phone">
+                        <i class="fa-solid fa-phone-volume"></i>
+                        +7 (4912) 99-69-49
+                    </li>
     
-    <script>
-        (function() {
-            'use strict';
- 
-            class Gallery {
-                // настройки по-умолчанию
-                static defaults = {
-                    margin:			10,		// расстояние между элементами [px]
-                    visibleItems: 	1,		// сколько элементов показывать одновременно
-                    border:			0,		// толщина рамки изображения прописанная в CSS [px]
-                    responsive:		true,	// адаптивная галерея
-                    autoScroll:		false,	// автоматическое прокручивание
-                    interval: 		3000,	// задержка при автоматическом прокручивании [ms]
-                    nav:			true,	// показать/скрыть кнопки next/prev
-                    dots:			false,	// показать/скрыть постраничную навигацию
-                    keyControl: 	false,	// управление клавишами вправо / влево
-                    animated:		false,	// включение анимации
-                    baseTransition:	0.4,	// скорость анимации, при изменении CSS свойств
-                    delayTimer:		250,	// время задержки при resize страницы [ms]
-                    limit:			30		// ограничиваем перемещение крайних элементов [px]
-                };
-
-                static LEFT = 37;	// код клавиши 'стрелочка влево' 
-                static RIGHT = 39;	// код клавиши 'стрелочка вправо'
-        
-                constructor(gallery, setup) {
+                    <li class="email">
+                        <i class="fa-solid fa-envelope"></i>
+                        automaster@mail.ru</a>
+                    </li>
                     
-                    this.gallery = gallery;
-                    this.setup = setup;
-            
-                    // контейнер в котором отображаются элементы галереи
-                    this.slider = this.gallery.querySelector('.slider');
+                    <li class="address">
+                        <i class="fa-solid fa-location-dot"></i>
+                        г. Рязань, ул. Баженова 36
+                    </li>
+                    
+                    <li class="worktime">
+                        <i class="fa-solid fa-clock"></i>
+                        Пн-Вс – с 10:00 до 19:00
+                    </li>
+                </ul>
+            </header>
 
-                    // контейнер, непосредственно в котором расположены элементы слайдера
-                    this.stage = this.gallery.querySelector('.stage');
 
-                    // элементы слайдера
-                    this.items = this.gallery.querySelectorAll('.stage > div');
+            <div class="container-page">
 
-                    // количество элементов в слайдере
-                    this.count = this.items.length;        
-                    this.current = 0;		// index координаты текущего элемента
-                    this.next = 0;			// index координаты следующего элемента
-                    this.pressed = false;	// указывает, что совершилось событие 'mousedown'
-                    this.start = 0;			// координата, с которой начато перетаскивание
-                    this.shift = 0;			// на сколько был перемещён курсор относительно start
-            
-                    // построение галереи исходя из полученных настроек
-                    this.init();
-                }
+                <!--   Меню навигации, нав бар -->
+                <nav class="link row navbar-dark">
+                    <div class="logo">
+                        <img src="icons/logo_auto02.png" alt="auto">
+                    </div>
 
-        
-                // объединяет и перезаписывает значения двух объектов
-                // и выдаёт общий результат
-                static extend(out) {
+                    <div class="active-link">
+                        <a class="nav-link active" href="books.html">Наши услуги</a>
+                    </div>
 
-                    out = out || {};
+                    <div>
+                        <a class="nav-link" href="visitors.html">Наши работы</a>
+                    </div>
 
-                    for (let i = 1; i < arguments.length; i++) {
+                    <div>
+                        <a class="nav-link" href="cards.html">О ремонте</a>
+                    </div>
 
-                        if (!arguments[i]) continue;
-
-                        for (let key in arguments[i]) {
-
-                            if (arguments[i].hasOwnProperty(key)) out[key] = arguments[i][key];
-                        }
-                    }
-
-                    return out;
-                };
-        
-                // возвращает координату Х текущего положения
-                // курсора или пальца
-                static xpos(e) {
-                    // touch event
-                    // проверяем, сформирован ли список точек на текущем элементе
-                    // (список пальцев, которые вступили в контакт)
-                    if (e.targetTouches && (e.targetTouches.length >= 1)) {
-                        // положение первой точки прикосновения, относительно левого края браузера
-                        return e.targetTouches[0].clientX;
-                    }
-                    // mouse event
-                    return e.clientX;
-                }
-            }
-        
-            // выбираем все галереи на странице
-            const galleries = document.querySelectorAll('.gallery');
-            // перебираем полученную коллекцию элементов
-            for (let gallery of galleries) {
-                // вариант настроек для данной галереи
-                const setup = gallery.dataset.setting;
-                // создаём экземпляр галереи
-                const slider = new Gallery(gallery, setting[setup]);
+                    <div>
+                        <a class="nav-link" href="statistics.html">Statistics</a>
+                    </div>
+                </nav>
+                <!-- <button type="button" class="btn-apply form-control">Add Row</button> -->
                 
-        }
-        )();
+                <hr class="hr-page">
 
-                init() {
-            // объединяем дефолтные настройки с настройками галереи
-            this.options = Gallery.extend({}, Gallery.defaults, this.setup);
-            // формируем каркас галереи
-            this.setSizeCarousel();
-            // заполняем массив с координатами X каждого элемента слайдера
-            this.setCoordinates();
-            // формируем управление слайдером в зависимости от настроек
-            this.initControl();
-            // устанавливаем обработчики событий, если ещё не устанавливались
-            if (this.events) return;
-            this.registerEventsHandler();
-        }
-    </script>
-</body>
+                <h1>КУЗОВНОЙ РЕМОНТ И ПОКРАСКА АВТОМОБИЛЕЙ ОТ 1 ДНЯ</h1>
+                <h2>Точно в цвет или перекрасим за свой счет</h2>
+            </div>       
+                
+
+            <div class="container-services">
+
+                <h2 class="h2-services">НАШИ УСЛУГИ</h2>
+
+                <hr class="hr-services">
+                
+                <div class="services">
+                    <div class="services-box">
+                        <div class="img-services">
+                            <img src="icons/auto_01.jpeg" alt="auto">
+                        </div>
+                        <div class="active-link">
+                            <h3>Малярные работы</h3>
+                            <p>В зависимости от поставленных задач и состояния покрытия при выполнении малярных работ на автомобиле может производиться локальная покраска, то есть окрашивание небольшого участка площади, или полная покраска отдельного элемента или кузова целиком.</p>
+                        </div>
+                    </div>
+                    <div class="services-box">
+                        <div class="img-services">
+                            <img src="icons/auto_02.jpeg" alt="auto">
+                        </div>
+                        <div class="active-link">
+                            <h3>Кузовные работы</h3>
+                            <p>Наши специалисты имеют всю необходимую квалификацию и опыт, позволяющие качественно и в срок произвести необходимые кузовные работы с Вашим автомобилем.</p>
+                        </div>
+                    </div>
+                    <div class="services-box">
+                        <div class="img-services">
+                            <img src="icons/auto_03.jpeg" alt="auto">
+                        </div>
+                        <div class="active-link">
+                            <h3>Слесарные работы</h3>
+                            <p>Перед ремонтом и обслуживанием Вашего автомобиля, Вы всегда можете запросить у мастера-консультанта предъявить сертификаты, подтверждающие компетентность механиков.</p>
+                        </div>
+                    </div>
+                    <div class="services-box">
+                        <div class="img-services">
+                            <img src="icons/auto_04.jpeg" alt="auto">
+                        </div>
+                        <div class="active-link">
+                            <h3>Ремонт стекол авто</h3>
+                            <p>В процессе выполнения ремонтных работ сколы на лобовом стекле заполняются полимерным составом. Для сохранения прозрачности, и чтобы минимизировать остаточные явления, подбирается наиболее подходящий по коэффициенту цветового преломления ремонтный материал.</p>
+                        </div>
+                    </div>
+                    <div class="services-box">
+                        <div class="img-services">
+                            <img src="icons/auto_05.jpeg" alt="auto">
+                        </div>
+                        <div class="active-link">
+                            <h3>Полировка авто</h3>
+                            <p>Погодные явления ежедневно оказывают негативное воздействие на лакокрасочное покрытие кузова – появляются сколы, следы от химических веществ. Даже для нового транспортного средства характерно подвергаться воздействию внешних факторов. Решение – полировка авто специальными средствами устранит налеты, восстановит лакокрасочное покрытие, удалит мелкие царапины лака.</p>
+                        </div>
+                    </div>
+                    <div class="services-box">
+                        <div class="img-services">
+                            <img src="icons/auto_06.jpeg" alt="auto">
+                        </div>
+                        <div class="active-link">
+                            <h3>Тюнинг и установка обвесов</h3>
+                            <p>Работаем с крупнейшими производителями и поставщиками оригинальных обвесов. Мы очень внимательно подходим к выбору расходников и материалов, и для своих клиентов мы предоставляем комплектующие по договоренности с компаниями-производителями тюнинга автомобилей.</p>
+                        </div>
+                    </div>
+                </div>
+
+                    
+                <!-- <button type="button">ПОДРОБНЕЕ</button> -->
+                
+            </div>
+
+                
+        </div>
+
+           
+        <script src="books.js"></script>
+    </body>
 </html>
