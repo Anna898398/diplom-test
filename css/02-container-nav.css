@@ -13,14 +13,6 @@
     z-index: 2;
 }
 
-.logo {
-    width: 200px;
-}
-
-.logo img {
-    width: 100%;
-}
-
 
 /* Меню навигации, нав бар */
 .link {
@@ -49,6 +41,14 @@
 /* .link .active-link {
     border-bottom: solid 3px rgb(80, 80, 80);
 } */
+
+.logo {
+    width: 200px;
+}
+
+.logo img {
+    width: 100%;
+}
 
 .container-nav hr {
     color: #ffffff;
