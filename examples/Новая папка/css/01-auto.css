@@ -1,0 +1,59 @@
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-size: 100%;
+    /* overflow: auto; */
+    position: relative;
+
+}
+
+/* .container-all {
+    width: 100%;
+} */
+
+.info {
+    width: 100%; 
+    height: 60px;
+    background-color: #081e3b;
+}
+
+.info ul {
+    display: flex;
+    align-items: center;
+    width: 100%; 
+    height: 100%;
+    list-style: none;
+    color: #b0c8e6;
+    font-size: 15px;
+    margin-left: 100px;
+}
+
+.info .phone, .info .email, .info .address {
+    display: flex;
+    align-items: center;
+    border-right: 1px solid #7ba36f;
+    padding: 0 20px;
+    height: 65%;
+}
+
+.info .worktime {  
+    display: flex;
+    align-items: center;
+    padding: 0 20px;
+    height: 65%;
+}
+
+.info ul i {
+   margin-right: 10px;
+}
+
+/* .info ul a {
+    color: #8ea1b9;
+} */
+
+
