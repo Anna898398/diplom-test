@@ -22,218 +22,256 @@
 		<link rel="stylesheet" href="css/owl.carousel.min.css">
 		
 		<!-- css -->
-		<link rel="stylesheet" href="auto.css">
-		<link rel="stylesheet" href="slider-title.css">
-        <!-- <link rel="stylesheet" href="css/02-container-nav.css">
-        <link rel="stylesheet" href="css/03-container-services.css">
-        <link rel="stylesheet" href="css/04-container-about-us.css">
-        <link rel="stylesheet" href="css/05-container-gallery.css">
-		<link rel="stylesheet" href="css/container-fix-element.css"> -->
+		<link rel="stylesheet" href="css/auto.css">
+		<link rel="stylesheet" href="css/auto-hr.css">
+		<link rel="stylesheet" href="css/01-auto-header.css">
+		<link rel="stylesheet" href="css/02-auto-slider-title.css">
+		<link rel="stylesheet" href="css/03-auto-evaluate-repairs.css">
+		<link rel="stylesheet" href="css/04-auto-services.css">
+		<link rel="stylesheet" href="css/05-auto-advantages.css">
+		<link rel="stylesheet" href="css/06-auto-list-services.css">
+		<link rel="stylesheet" href="css/09-auto-about-us.css">
+        <!-- <link rel="stylesheet" href="css/container-fix-element.css"> -->
 
 		<title>Авто Мастер</title>
 	</head>
 
-	<body>		
-		
-		<div class="container-header">
-			<header>
-				<div class="info">
-					<ul>
-						<li class="phone">
-							<i class="fa-solid fa-phone-volume"></i>
-							+7 (4912) 99-69-49
-						</li>
-						<li class="email">
-							<i class="fa-solid fa-envelope"></i>
-							<a>automaster@mail.ru</a>
-						</li>
-			
-						<li class="address">
-							<i class="fa-solid fa-location-dot"></i>
-							г. Рязань, ул. Баженова 36
-						</li>
-			
-						<li class="worktime">
-							<i class="fa-solid fa-clock"></i>
-							Пн-Вс – с 10:00 до 19:00
-						</li>
-					</ul>
+	<body>	
+        
+        <!-- 01 Header -->
+        <header>			
+			<!-- блок для логотипа -->
+			<div class="container-header-img row">
+				<img src="icons/logo-blue1.png" alt="">
+				<h1>Авто Мастер</h1>
+				<p>АВТОСЕРВИС | ШИНОМОНТАЖ</p>
+			</div>
+
+
+			<!-- строка верхняя - график работы, адрес и кнопка связи -->
+			<div class="container-header-upper row">
+				<div class="header-block-decoration"></div>
+
+				<div class="header-worktime-adress col">
+					<p>Понедельник-Воскресенье <span>10:00 - 19:00</span></p>
+					<p>г. Рязань, ул. Баженова 36</p>
 				</div>
 
+				<div class="header-btn">
+					<button>Перезвоните Мне</button>
+				</div>
+			</div>
 
-				<!-- логотип - как ссылка главного меню, меню навигации -->
-				<div class="logo">
-					<a class="active-link" href="#nav">
-						<img src="icons/logo_auto02.png" alt="auto">
-					</a>
+
+			<!-- строка средняя - текст, емэйл и номер телефона -->
+			<div class="container-header-average row">
+				<div class="header-text col">
+					<p>Для связи с нами Вы можете написать нам <a href="">automaster@mail.ru</a> или позвонить</p>							
 				</div>
 
-
-				<!--   Меню навигации, нав бар -->
-				<div class="container-nav" id="nav">
-					<nav class="link row navbar-dark">
-						<div class="active-link">
-							<a class="nav-link active" href="#services">Наши услуги</a>
-						</div>
-
-						<div>
-							<a class="nav-link" href="#gallery">Наши работы</a>
-						</div>
-
-						<div>
-							<a class="nav-link" href="#repair">О ремонте</a>
-						</div>
-
-						<div>
-							<a class="nav-link" href="statistics.html">Statistics</a>
-						</div>
-					</nav>
+				<div class="header-phone">
+					<p>+7 <span>(4912)</span> 00-00-00</p>
 				</div>
-			</header>		
+			</div>
 
 
-			<!-- слайдер с информацией об услугах с фоном-картинкой -->
-			<div id="slider_title">
-				<input checked type="radio" name="slider" id="slide1" />
-		
-				<input type="radio" name="slider" id="slide2" />
-				<input type="radio" name="slider" id="slide3" />
-				<input type="radio" name="slider" id="slide4" />
-		
-				<div class="slider-wrapper">
-					<div class="slider-inner">
-						<article>
-							<div class="text-h center">
-								<h2>Покраска Автомобилей От 1 Дня</h2>
-								<h1>Кузовной Ремонт</h1>
-								<h3>Точно в цвет или перекрасим за свой счет</h3>
-							</div>
-		
-							<img src="icons/slide1.jpg" />
-						</article>
-						
-						<article>
-							<div class="text-h left">
-								<h2>Гарантия От Года На Все Услуги</h2>
-								<h1>Работаем <br>По Договору</h1>
-								<h3>Работаем с юридическими лицами</h3>
-							</div>
-		
-							<img src="icons/slide2.jpg" />
-						</article>
-		
-						<article>
-							<div class="text-h center-botton">
-								<h2>Работаем с 2006 года</h2>
-								<h1>Доверьтесь <br>Профессионалам</h1>
-								<h3>Поможем сэкономить на запчастях</h3>
-							</div>
-		
-							<img src="icons/slide3.jpg" />
-						</article>
+			<!-- строка нижняя - меню навигации -->
+			<div class="container-header-lower row">
+				<nav class="navbar-dark">
+
+					<div class="link active-link">
+						<a class="nav-link active" href="#services">НАШИ УСЛУГИ</a>
 					</div>
+
+					<div class="link">
+						<a class="nav-link" href="#gallery">НАШИ РАБОТЫ</a>
+					</div>
+
+					<div class="link">
+						<a class="nav-link" href="#repair">О РЕМОНТЕ</a>
+					</div>
+
+					<div class="link">
+						<a class="nav-link" href="statistics.html">О НАС</a>
+					</div>
+
+				</nav>
+			</div>
+		</header>
+
+
+
+        <!-- 02 Слайдер с информацией об услугах с фоном-картинкой -->
+		<div class="container-slider-background">
+			<input checked type="radio" name="slider" id="slide1" />
+	
+			<input type="radio" name="slider" id="slide2" />
+			<input type="radio" name="slider" id="slide3" />
+			<input type="radio" name="slider" id="slide4" />
+	
+			<div class="slider-wrapper">
+				<div class="slider-inner">
+					<article>
+						<div class="text-h center">
+							<h2>Покраска Автомобилей От 1 Дня</h2>
+							<h1>Кузовной Ремонт</h1>
+							<h3>Точно в цвет или перекрасим за свой счет</h3>
+						</div>
+	
+						<img src="icons/slide1.jpg" />
+					</article>
+					
+					<article>
+						<div class="text-h left">
+							<h2>Гарантия От Года На Все Услуги</h2>
+							<h1>Работаем <br>По Договору</h1>
+							<h3>Работаем с юридическими лицами</h3>
+						</div>
+	
+						<img src="icons/slide2.jpg" />
+					</article>
+	
+					<article>
+						<div class="text-h center-botton">
+							<h2>Работаем с 2006 года</h2>
+							<h1>Доверьтесь <br>Профессионалам</h1>
+							<h3>Поможем сэкономить на запчастях</h3>
+						</div>
+	
+						<img src="icons/slide3.jpg" />
+					</article>
 				</div>
-				
-				<div class="slider-prev-next-control">
-					<label for="slide1"></label>
-					<label for="slide2"></label>
-					<label for="slide3"></label>
-				</div>	
 			</div>
-
-			<div class="container1">
-				<ul>
-					<li class="info-li">
-						<h1 class="white">Закзать звонок</h1>
-						<h1 class="blue">Форма связи</h1>
-					</li>
-
-					<li class="text-li">
-						<p>Объясним ценообразование каждого элемента, подберем запчасти на ваш автомобиль.</p>
-					</li>
-
-					<li class="img-li">
-						<img src="icons/banner-key.png" alt="auto">
-					</li>
-
-					<li class="btn-li">
-						<button>Оценить ремонт</button>
-					</li>
-				</ul>
-			</div>
-		</div>		
+			
+			<div class="slider-prev-next-control">
+				<label for="slide1"></label>
+				<label for="slide2"></label>
+				<label for="slide3"></label>
+			</div>	
+		</div>
 
 
-		<!-- Таблица с перечнем услуг и фото -->
-		<div class="cotainer-main">
-			<h1>Что мы делаем</h1>
-			<p>Мы предлагаем полный комплекс услуг по ремонту и техническому обслуживанию автомобилей</p>			
 
-			<!-- стилизация типа <hr> -->
+        <!-- 03 Оценить ремонт, форма связи -->
+		<div class="container-evaluate-repairs">
+			<ul>
+				<li class="info">
+					<h1 class="white">Закзать звонок</h1>
+					<h1 class="blue">Форма связи</h1>
+				</li>
+
+				<li class="text">
+					<p>Объясним ценообразование каждого элемента, подберем запчасти на ваш автомобиль.</p>
+				</li>
+
+				<li class="banner">
+					<img src="icons/banner-key.png" alt="auto">
+				</li>
+
+				<li class="btn-evaluate-repairs">
+					<button>Оценить ремонт</button>
+				</li>
+			</ul>
+		</div>
+
+
+
+        <!-- 04 Таблица с основным перечнем услуг и фото -->
+		<div class="container-services">
+			<h1>Что мы делаем?</h1>
+			<p>Основные услуги, которые мы выполняем</p>			
+
+			<!-- стилизация линии типа <hr> -->
 			<div class="line">
 				<div class="line-long"></div>
 				<div class="line-short"></div>
 				<div class="line-short"></div>
 			</div>
 			
-			<div class="photo">
+			<!-- таблица-сетка основным услуг -->
+			<div class="container-box">
 				<div class="box1">
 					<h2>Малярные <br> работы</h2>
 					<p>При выполнении малярных работ может производиться локальная покраска</p>
 					<h1>Сервис</h1>
+
+					<!-- текст "Жми!", который появляется при наведении на ячейку сетки -->
+					<div class="hover-text">
+						<h1>Жми!</h1>
+					</div>
 				</div>
 
 				<div class="box2">
-					<img src="icons/auto_01.jpeg" alt="">
+					<img src="icons/grid-1.jpg" alt="">
 				</div>
 
 				<div class="box3">
 					<h2>Кузовные<br>работы</h2>
 					<p>Наши специалисты всю имеют опыт работы от 6 до 15 лет</p>
 					<h1>Мастер</h1>
+
+					<!-- текст "Жми!", который появляется при наведении на ячейку сетки -->
+					<div class="hover-text">
+						<h1>Жми!</h1>
+					</div>
 				</div>
 
 				<div class="box4">
-					<img src="icons/auto_02.jpeg" alt="">
+					<img src="icons/grid-2.jpg" alt="">
 				</div>
 
 				<div class="box5">
 					<h2>Тюнинг<br>и установка обвесов</h2>
 					<p>Работаем с крупнейшими производителями и поставщиками оригинальных обвесов</p>
-					<h1>Авто</h1>
-					 
+					<h1>Авто</h1>	
+					
+					<!-- текст "Жми!", который появляется при наведении на ячейку сетки -->
+					<div class="hover-text">
+						<h1>Жми!</h1>
+					</div>
 				</div>
 
 				<div class="box6">
-					<img src="icons/auto_03.jpeg" alt="">
+					<img src="icons/grid-3.jpg" alt="">
 				</div>
 
 				<div class="box7">
 					<h2>Слесарные<br>работы</h2>
 					<p>Мастера-консультанта имеют сертификаты, подтверждающие компетентность механиков</p>
 					<h1>Шино</h1>
+
+					<!-- текст "Жми!", который появляется при наведении на ячейку сетки -->
+					<div class="hover-text">
+						<h1>Жми!</h1>
+					</div>
 				</div>
 
 				<div class="box8">
-					<img src="icons/auto_04.jpeg" alt="">
+					<img src="icons/grid-4.jpg" alt="">
 				</div>
 
 				<div class="box9">
 					<h2>Полировка<br>авто</h2>
 					<p>Полировка специальными средствами устранит налеты, восстановит лакокрасочное покрытие, удалит мелкие царапины лака</p>
 					<h1>Монтаж</h1>
+
+					<!-- текст "Жми!", который появляется при наведении на ячейку сетки -->
+					<div class="hover-text">
+						<h1>Жми!</h1>
+					</div>
 				</div>
 			</div>
 		</div>
 
 
-		<!-- Наши преимущества -->
-		<div class="advantage">
+
+        <!-- 05 Раздел - наши преимущества -->
+		<div class="container-advantages">
 			<h1>100% Гарантия результата</h1>
 			<p>Мы предлагаем полный комплекс услуг по ремонту и техническому обслуживанию автомобилей</p>
-			<div class="servises row">
 
-				<div class="ser-info col-4">
+			<div class="advantages row">
+				<div class="advantage-1 col-4">
 					<div class="img">
 						<img src="icons/icon-car-1.png" alt="">
 					</div>
@@ -244,7 +282,7 @@
 					</div>
 				</div>
 
-				<div class="ser-info col-4">
+				<div class="advantage-2 col-4">
 					<div class="img">
 						<img src="icons/icon-car-2.png" alt="">
 					</div>
@@ -255,7 +293,7 @@
 					</div>
 				</div>
 
-				<div class="ser-info col-4">
+				<div class="advantage-3 col-4">
 					<div class="img">
 						<img src="icons/icon-car-3.png" alt="">
 					</div>
@@ -269,21 +307,30 @@
 		</div>
 
 
-		<!-- Полный перечень услуг -->
-		<div class="list">
-			<div class="list-item">
-				<!-- фон картинка не подвижная -->
-				<div class="list-col-1">
+
+        <!-- 06 Полный перечень услуг -->
+		<!-- фон картинка не подвижная -->
+		<div class="container-list-services" style="background-image: url(icons/backgraund.jpg);">
+			<div class="list-item">	
+				
+				<!-- 1 столбец с заголовком -->
+				<div class="title-col-1">
 					<h1>Ремонтные Услуги, которые <span> Мы Предлагаем</span></h1>
+
+					<!-- стилизация линии типа <hr> -->
 					<div class="line">
 						<div class="line-long"></div>
 						<div class="line-short"></div>
 						<div class="line-short"></div>
 					</div>
+
 					<p>Мы предоставляем полный спектр услуг по ремонту любой части кузова для всех марок и моделей автомобилей, независимо от причины. Это включает в себя все, от стоек, амортизаторов и концов рулевых тяг до шаровых шарниров, пружин и в основном всего, что входит в ремонт всей части автомобиля.</p>
 				
 					<button>СВЯЗАТЬСЯ с нами</button>
 				</div>
+				
+
+				<!-- 2 столбец с перечнем услуг -->
 				<div class="list-col-2">
 					<ol>
 						<li>Общий ремонт и техническое обслуживание автомобилей</li>
@@ -298,7 +345,10 @@
 						<li>Компьютерная диагностика</li>
 					</ol>
 				</div>
-				<div class="list-col-2">
+
+
+				<!-- 3 столбец с перечнем услуг -->
+				<div class="list-col-3">
 					<ol>
 						<li>Рекомендуемое производителем обслуживание</li>
 						<li>Ремонт и замена тормозов</li>
@@ -313,60 +363,18 @@
 				</div>
 			</div>
 
+			<!-- стилизация h1 как фон -->
 			<h1 class="h-background">Авто Мастер</h1>
 		</div>
 
+<!-- ________________________________________________________ -->
 
-		<!-- акция -->
-		<div class="promo">
-			<div class="promo-box1">
-				<div class="promo-img">
-					<img src="icons/auto_02-grey.jpg" alt="">
-				</div>
-
-				<div class="promo-text">
-					<div class="promo-price">
-						<p>Купоны от</p>
-						<h1><span>$</span> 25 off</h1>
-						<h3>Ремонт!</h3>
-					</div>
-
-					<div class="promo-info">
-						<h3>Наше предложение</h3>
-						<p>Любая услуга стоимостью 250 долларов и более</p>
-						<button>Посмотреть все купоны</button>
-					</div>
-				</div>
-			</div>
-
-			<div class="promo-box2">
-				<h1>Качественный Сервис и Удовлетворенность<br>
-				<span>Клиентов!</span></h1>
-				
-				<div class="line">
-					<div class="line-long"></div>
-					<div class="line-short"></div>
-					<div class="line-short"></div>
-				</div>
-
-				<p>Мы используем новейшее диагностическое оборудование, чтобы гарантировать, что ваш автомобиль будет отремонтирован или обслужен должным образом и своевременно.</p>
-
-				<ol>
-					<li>Гарантия 24 месяца</li>
-					<!-- <li>Courtesy Local Shuttle Service</li> -->
-					<li>Программа поощрения клиентов</li>
-					<li>Сертифицированные специалисты</li>
-					<li>Помощь на дороге</li>
-					<!-- <li>Courtesy Loaner Vehicle</li> -->
-				</ol>
-			</div>
-		</div>			
-		
-
-		<!-- Раздел - этапы ремонта -->
-		<div class="step">
+        <!-- 08 Наши работы -->
+		<div class="step" style="background-image: url(icons/auto_bg-grey.jpg);">
 			<h1>Как Мы <span>Работаем</span></h1>
+
 			<p>Эти несколько шагов помогут вам понять, как работает наш сервис</p>
+			
 			<div class="grig-photo">
 				<div class="ph1">
 					<div>1</div>
@@ -394,120 +402,107 @@
 			</div>
 		</div>
 
-		
-		<div class="container-advantages">
-			<h1>Why Choose Certified Service?</h1>
-			<p>We partnered with RepairPal to bring you the most sophisticated fair-price estimates</p>
+
+
+        <!-- 09 О нас -->
+		<!-- <div class="container-about-us">
+
+			<h1>Почему стоит выбрать именно нас?</h1>
+			<p>Мы объясняем из чего складывается цена на услугу, помогаем подобрать и сэкономить на запчастях</p>
+			
 			<div class="line">
 				<div class="line-long"></div>
 				<div class="line-short"></div>
 				<div class="line-short"></div>
 			</div>
 
-			<div class="advantages row">
-				<div class="advantages1 col">
-					<div class="box-img">
-						<img src="icons/icons-white.png" alt="">
+			<div class="info row">
+				<div class="info-col-1 col-2">
+					<div class="info-icon">
+						<i class="fa-solid fa-hand-holding-dollar"></i>
 					</div>
 
-					<h1>Estimates</h1>
-					<p>We bring you the most accurate and fair-price service estimates</p>
+					<h1>Оценка</h1>
+					<p>Мы предлагаем точную оценку услуг по справедливой цене</p>
 				</div>
 		
-				<div class="advantages2 col">
-					<div class="box-img">
-						<img src="icons/icons-white.png" alt="">
+				<div class="info-col-2 col-2">
+					<div class="info-icon">
+						<i class="fa-solid fa-handshake"></i>
 					</div>
 					
-					<h1>Trusted</h1>
-					<p>Trusted Service Centers are certified for high quality</p>
+					<h1>Доверие</h1>
+					<p>Нам доверяют уже с 2006 года</p>
 				</div>
 				
-				<div class="advantages3 col">
-					<div class="box-img">
-						<img src="icons/icons-white.png" alt="">
+				<div class="info-col-3 col-2">
+					<div class="info-icon">
+						<i class="fa-solid fa-award"></i>
 					</div>
 					
-					<h1>Guarantees</h1>
-					<p>Covers parts and labor on qualifying repairs and services for 24 months/24,000 miles</p>
+					<h1>Гарантия</h1>
+					<p>Мы даем гарантию от года на все свои виды услуг</p>
 				</div>
 			</div>
-		</div>
-
-		<div class="container-serv-slider"></div>
-
-		<div class="container-video row">
-			<div class="text-box col">
-				<h1>The Car Repair Statistics</h1>
-				<p>Auto repair technical statistics you must to know. Whether you're coming in for a routine inspection, oil change or a repair service, we promise that you will be completely satisfied with our work.</p>
-				<div class="statistics">
-					<div class="stat-info">
-						<span>20</span>
-						<div>
-							<p>Years of experience</p>
-						</div>
-					</div>
-
-					<div class="stat-info">
-						<span>2.9K</span>
-						<div>
-							<p>Vehicle Repaired</p>
-						</div>
-					</div>
-
-					<div class="stat-info">
-						<span>32</span>
-						<div>
-							<p>Technicians & Workers</p>
-						</div>
-					</div>
-
-					<div class="stat-info">
-						<span>100%</span>
-						<div>
-							<p>Satisfied Customers</p>
-						</div>
-					</div>
-				</div>
-			</div>
-
-			<div class="video-box col"></div>
-		</div>
-
-		<div class="container-form">
-
-		</div>
-		
-
-		<footer>
-			
-		</footer>
-
+		</div> -->
 	
-
-		<!-- фиксированные кнопки обратной связи и "вверх" -->
-		<!-- <div class="container-fix-element">
-			<div class="btn-contact">
-				<input type="image" src='icons/icons-chat-white.png' />
+        <div class="container-about-us">
+            <h1>Почему стоит выбрать именно нас?</h1>
+			<p>Мы объясняем из чего складывается цена на услугу, помогаем подобрать и сэкономить на запчастях</p>
+        
+            <div class="line">
+				<div class="line-long"></div>
+				<div class="line-short"></div>
+				<div class="line-short"></div>
 			</div>
 
-			<div class="btn-up">
-				<a>&#8679;</a>
+            <div class="info row">
+				<div class="info-col-1 col">
+					<div class="info-icon">
+						<i class="fa-solid fa-hand-holding-dollar"></i>
+					</div>
+
+					<h1>Оценка</h1>
+					<p>Мы предлагаем точную оценку услуг по справедливой цене</p>
+				</div>
+		
+				<div class="info-col-2 col">
+					<div class="info-icon">
+						<i class="fa-solid fa-handshake"></i>
+					</div>
+					
+					<h1>Доверие</h1>
+					<p>Нам доверяют уже с 2006 года</p>
+				</div>
+				
+				<div class="info-col-3 col">
+					<div class="info-icon">
+						<i class="fa-solid fa-award"></i>
+					</div>
+					
+					<h1>Гарантия</h1>
+					<p>Мы даем гарантию от года на все свои виды услуг</p>
+				</div>
 			</div>
-		</div> --> 
-
+        
+        </div>
 		
 		
 		
 		
-
 
 		<!-- JQuery -->
 		<script src="js/jquery-3.5.1.min.js"></script>
 		<script src="js/jquery.maskedinput.min.js"></script>
 
-		<!--  Owl Carousel JS-file from local folder  -->
+		<!-- fonts шрифты -->
+		<script src="https://use.fontawesome.com/98eb59ceb1.js"></script>
+
+		<!--  Owl Carousel карусель фото  -->
 		<script src="js/owl.carousel.min.js"></script>
+
+		<!-- модальное окно -->
+		<script src="js/modal-window.js"></script>
 
 		<!-- js -->
 		<!-- <script src="js/index.js"></script> -->

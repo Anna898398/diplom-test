@@ -1,0 +1,81 @@
+/* оценить ремонт, форма связи */
+.container-evaluate-repairs {
+    background-color: #292929;
+    height: 135px;
+    padding: 0 70px;
+}
+
+.container-evaluate-repairs ul {
+    display: flex;
+    list-style: none;
+}
+
+
+/* li info Закзать звонок, Форма связи */
+.container-evaluate-repairs .info {
+    align-self: center;
+    position: relative;
+    top: -40px;
+}
+
+.container-evaluate-repairs .info .white {
+    color: rgb(255, 255, 255);
+}
+
+.container-evaluate-repairs .info .blue {
+    color: #4290e0;
+    margin-left: 70px;
+}
+
+
+/* li text описание */
+.container-evaluate-repairs .text {
+    width: 30%;
+    margin: 0 0 0 50px;
+    align-self: center;
+    position: relative;
+    top: -30px;
+}
+
+.container-evaluate-repairs .text p {
+    color: rgb(255, 255, 255);
+    font-size: 15px;
+    line-height: 25px;
+}
+
+
+/* li banner картинка-баннер ключ авто */
+.container-evaluate-repairs .banner {
+    width: 200px;
+    align-self: center;
+}
+
+.container-evaluate-repairs .banner img {
+    width: 150%;
+    position: relative;
+    top: -30px;
+}
+
+
+/* li btn кнопка Оценить ремонт */
+.container-evaluate-repairs .btn-evaluate-repairs button {
+    border: 2px solid #4290e0;
+    position: relative;
+    left: 100px;
+    bottom: -40px;
+    padding: 10px 30px;
+    font-size: 18px;
+    font-weight: 500;
+    color: rgb(255, 255, 255);
+    background-color: rgba(0, 0, 0, 0);
+    background-image: linear-gradient(135deg, #f1d14e 50%, transparent 50%);
+    background-position: 100%;
+    background-size: 400%;
+    transition: background 300ms ease-in-out;
+   
+}
+
+.container-evaluate-repairs .btn-evaluate-repairs button:hover {
+    color: rgba(0, 0, 0, 0.925);    
+    background-position: 0;
+}

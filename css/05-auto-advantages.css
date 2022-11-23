@@ -1,0 +1,56 @@
+/* Раздел - наши преимущества */
+.container-advantages {
+    padding: 0 70px 70px 70px;
+    color: #363636;
+}
+
+.container-advantages h1 {
+    text-align: center;
+    font-size: 45px;
+    font-weight: 700;
+    margin-top: 100px;
+}
+
+.container-advantages p {
+    font-size: 17px;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.advantages {
+    display: flex;
+}
+
+.advantage-1,
+.advantage-2,
+.advantage-3 {
+    display: flex;
+    margin-top: 30px;
+}
+
+.advantages .img {
+    width: 180px;
+    height: 60px;
+    border-right: 3px solid #4290e0;
+    margin-right: 20px;
+    padding-right: 15px;
+}
+
+.advantages .img img {
+    width: 100%;
+}
+
+.advantages .text {
+    margin: 0 20px 0 0;
+}
+
+.advantages .text h3 {
+    font-size: 22px;
+    font-weight: 700;
+    text-align: left;
+}
+
+.advantages .text p {
+    font-size: 15px;
+    text-align: left;
+}

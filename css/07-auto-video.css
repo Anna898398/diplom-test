@@ -1,0 +1,46 @@
+.container-video {
+    padding: 0 70px;
+    background-color: aqua;
+}
+
+.container-video {
+    display: flex;
+}
+
+.text-box {
+    margin-right: 15px;
+}
+
+.statistics {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 50% 50%;
+    gap: 30px;
+}
+
+.stat-info {
+    display: flex;
+    overflow: hidden;
+    align-items: center;
+}
+
+.stat-info span {
+    display: flex;
+    color: rgb(77, 77, 255);
+    font-size: 50px;
+    font-weight: 700;
+    margin-right: 20px;
+}
+
+.stat-info div {
+    border-left: 3px solid rgb(77, 77, 255);
+    font-size: 20px;
+    font-weight: 500;
+    height: 60px;
+    padding-left: 20px;
+}
+
+
+.video-box {
+    margin-left: 15px;
+}
