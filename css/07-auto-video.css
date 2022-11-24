@@ -1,46 +1,67 @@
 .container-video {
-    padding: 0 70px;
-    background-color: aqua;
-}
-
-.container-video {
     display: flex;
-}
-
-.text-box {
-    margin-right: 15px;
+    height: 650px;
+    align-items: center;
+    padding: 0 70px;
 }
 
 .statistics {
+    width: 65%;
+}
+
+.statistics h1 {
+    font-size: 40px;
+    font-weight: 700;
+    margin-bottom: 20px;
+    transform: scale(1, 1.1);
+}
+
+.statistics p {
+    font-size: 17px;
+    margin-bottom: 30px;
+}
+
+.content-box {
     display: grid;
     grid-template-columns: 50% 50%;
     grid-template-rows: 50% 50%;
-    gap: 30px;
+    gap: 20px;
 }
 
-.stat-info {
+.content-box .info {
     display: flex;
+    align-items: center;
     overflow: hidden;
     align-items: center;
 }
 
-.stat-info span {
-    display: flex;
-    color: rgb(77, 77, 255);
-    font-size: 50px;
+.content-box .info span {
+    color: #4290e0;
+    font-size: 55px;
     font-weight: 700;
     margin-right: 20px;
 }
 
-.stat-info div {
-    border-left: 3px solid rgb(77, 77, 255);
+.content-box .info .ed-k { 
+    color: #4290e0;
+    font-size: 43px;
+    font-weight: 700;
+}
+
+.content-box .info p {
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.content-box .info div {
+    border-left: 3px solid #4290e0;
     font-size: 20px;
     font-weight: 500;
     height: 60px;
     padding-left: 20px;
 }
 
-
 .video-box {
-    margin-left: 15px;
+    background-color: antiquewhite;
+    margin-left: 70px;
 }
