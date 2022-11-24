@@ -1,3 +1,4 @@
+/* 07 Статистика, Видео */
 .container-video {
     display: flex;
     height: 650px;
@@ -21,6 +22,7 @@
     margin-bottom: 30px;
 }
 
+/* Статистика */
 .content-box {
     display: grid;
     grid-template-columns: 50% 50%;
@@ -61,6 +63,7 @@
     padding-left: 20px;
 }
 
+/* Видео */
 .video-box {
     background-color: antiquewhite;
     margin-left: 70px;

@@ -1,6 +1,12 @@
+* {
+    box-sizing: border-box;
+}
+
 body {
     font-family: 'Poppins', sans-serif;
     color: #292929;
+    min-width: 1200px;
+    max-width: 1600px;
 }
 
 header {
