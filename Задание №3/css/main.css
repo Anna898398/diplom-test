@@ -1,0 +1,310 @@
+.row-table {
+    background-color: rgba(78, 161, 187, 0.425);
+}
+
+#formControl {
+    height: 10px;
+    margin-top: 0;
+}
+
+.navbar {
+    background-color: rgb(21, 140, 196);
+}
+
+#faText {
+    font-size: 12pt;
+}
+
+.number {
+    width: 5vw;
+}
+
+#btn1 {
+    background-color: rgb(21, 140, 196);
+}
+
+.caption {
+    color: rgb(206, 206, 206);
+    font-size: 10px;
+}
+
+
+
+_____________
+
+.radio-buttons1 {
+    line-height: 10px;
+    margin-bottom: 40px;
+}
+.buttons1 span {
+    margin: 0 15px 0 0;
+    cursor: pointer;
+}
+
+[type="radio"] {
+    display: none;
+}
+
+[type="radio"]+.green1::before {
+    content: '';
+    display: inline-block;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    border: 2px rgb(255, 255, 255) solid;
+    box-shadow: 0 0 0 1px rgb(11, 134, 11);
+    transition: .2s ease-in all;
+    margin: 0 5px -3px 0;
+}
+
+[type="radio"]+.yellow1::before {
+    content: '';
+    display: inline-block;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    border: 2px rgb(255, 255, 255) solid;
+    box-shadow: 0 0 0 1px rgb(221, 224, 14);
+    transition: .2s ease-in all;
+    margin: 0 5px -3px 0;
+}
+
+[type="radio"]+.red1::before {
+    content: '';
+    display: inline-block;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    border: 2px rgb(255, 255, 255) solid;
+    box-shadow: 0 0 0 1px rgb(221, 43, 19);
+    transition: .2s ease-in all;
+    margin: 0 5px -3px 0;
+}
+
+[type="radio"]:checked+.green1::before {
+    background: rgb(11, 134, 11);
+    box-shadow: 0 0 0 1px rgb(11, 134, 11);
+}
+
+[type="radio"]:checked+.yellow1::before {
+    background: rgb(221, 224, 14);
+    box-shadow: 0 0 0 1px rgb(221, 224, 14);
+}
+
+[type="radio"]:checked+.red1::before {
+    background: rgb(221, 43, 19);
+    box-shadow: 0 0 0 1px rgb(221, 43, 19);
+}
+
+_____________
+
+.radio-buttons2 {
+    line-height: 10px;
+    margin-bottom: 40px;
+}
+.buttons2 span {
+    margin: 0 15px 0 0;
+    cursor: pointer;
+}
+
+[type="radio"] {
+    display: none;
+}
+
+[type="radio"]+.green2::before {
+    content: '';
+    display: inline-block;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    border: 2px rgb(255, 255, 255) solid;
+    box-shadow: 0 0 0 1px rgb(11, 134, 11);
+    transition: .2s ease-in all;
+    margin: 0 5px -3px 0;
+}
+
+[type="radio"]+.yellow2::before {
+    content: '';
+    display: inline-block;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    border: 2px rgb(255, 255, 255) solid;
+    box-shadow: 0 0 0 1px rgb(221, 224, 14);
+    transition: .2s ease-in all;
+    margin: 0 5px -3px 0;
+}
+
+[type="radio"]+.red2::before {
+    content: '';
+    display: inline-block;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    border: 2px rgb(255, 255, 255) solid;
+    box-shadow: 0 0 0 1px rgb(221, 43, 19);
+    transition: .2s ease-in all;
+    margin: 0 5px -3px 0;
+}
+
+[type="radio"]:checked+.green2::before {
+    background: rgb(11, 134, 11);
+    box-shadow: 0 0 0 1px rgb(11, 134, 11);
+}
+
+[type="radio"]:checked+.yellow2::before {
+    background: rgb(221, 224, 14);
+    box-shadow: 0 0 0 1px rgb(221, 224, 14);
+}
+
+[type="radio"]:checked+.red2::before {
+    background: rgb(221, 43, 19);
+    box-shadow: 0 0 0 1px rgb(221, 43, 19);
+}
+
+_____________
+
+.radio-buttons3 {
+    line-height: 10px;
+    margin-bottom: 40px;
+}
+.buttons3 span {
+    margin: 0 15px 0 0;
+    cursor: pointer;
+}
+
+[type="radio"] {
+    display: none;
+}
+
+[type="radio"]+.green3::before {
+    content: '';
+    display: inline-block;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    border: 2px rgb(255, 255, 255) solid;
+    box-shadow: 0 0 0 1px rgb(11, 134, 11);
+    transition: .2s ease-in all;
+    margin: 0 5px -3px 0;
+}
+
+[type="radio"]+.yellow3::before {
+    content: '';
+    display: inline-block;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    border: 2px rgb(255, 255, 255) solid;
+    box-shadow: 0 0 0 1px rgb(221, 224, 14);
+    transition: .2s ease-in all;
+    margin: 0 5px -3px 0;
+}
+
+[type="radio"]+.red3::before {
+    content: '';
+    display: inline-block;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    border: 2px rgb(255, 255, 255) solid;
+    box-shadow: 0 0 0 1px rgb(221, 43, 19);
+    transition: .2s ease-in all;
+    margin: 0 5px -3px 0;
+}
+
+[type="radio"]:checked+.green3::before {
+    background: rgb(11, 134, 11);
+    box-shadow: 0 0 0 1px rgb(11, 134, 11);
+}
+
+[type="radio"]:checked+.yellow3::before {
+    background: rgb(221, 224, 14);
+    box-shadow: 0 0 0 1px rgb(221, 224, 14);
+}
+
+[type="radio"]:checked+.red3::before {
+    background: rgb(221, 43, 19);
+    box-shadow: 0 0 0 1px rgb(221, 43, 19);
+}
+
+_____________
+
+.radio-buttons4 {
+    line-height: 10px;
+    margin-bottom: 40px;
+}
+.buttons4 span {
+    margin: 0 15px 0 0;
+    cursor: pointer;
+}
+
+[type="radio"] {
+    display: none;
+}
+
+[type="radio"]+.green4::before {
+    content: '';
+    display: inline-block;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    border: 2px rgb(255, 255, 255) solid;
+    box-shadow: 0 0 0 1px rgb(11, 134, 11);
+    transition: .2s ease-in all;
+    margin: 0 5px -3px 0;
+}
+
+[type="radio"]+.yellow4::before {
+    content: '';
+    display: inline-block;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    border: 2px rgb(255, 255, 255) solid;
+    box-shadow: 0 0 0 1px rgb(221, 224, 14);
+    transition: .2s ease-in all;
+    margin: 0 5px -3px 0;
+}
+
+[type="radio"]+.red4::before {
+    content: '';
+    display: inline-block;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    border: 2px rgb(255, 255, 255) solid;
+    box-shadow: 0 0 0 1px rgb(221, 43, 19);
+    transition: .2s ease-in all;
+    margin: 0 5px -3px 0;
+}
+
+[type="radio"]:checked+.green4::before {
+    background: rgb(11, 134, 11);
+    box-shadow: 0 0 0 1px rgb(11, 134, 11);
+}
+
+[type="radio"]:checked+.yellow4::before {
+    background: rgb(221, 224, 14);
+    box-shadow: 0 0 0 1px rgb(221, 224, 14);
+}
+
+[type="radio"]:checked+.red4::before {
+    background: rgb(221, 43, 19);
+    box-shadow: 0 0 0 1px rgb(221, 43, 19);
+}
+
+input::-webkit-calendar-picker-indicator {
+    opacity: 1;
+    width: 1px;
+}
+
+.file-homework {
+    display: inline-flex;
+    color: rgba(78, 161, 187, 0.719);
+    font-size: 20px;
+}
+
+.file-homework input {
+    width: 60px;
+}
