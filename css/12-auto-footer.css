@@ -49,16 +49,6 @@ footer {
 }
 
 
-/* карта */
-/* .map.container-fluid {
-    width: 50%;
-    height: 340px;
-    padding: 0;
-    background-image: url(https://yandex.ru/maps/11/ryazan/?ll=39.741914%2C54.629565&z=12);
-    background-position: center center;
-    background-color: aqua;
-} */
-
 /* Форма обратной связи */
 .container-form-communication {
     width: 60%;
@@ -115,16 +105,26 @@ footer {
 }
 
 .container-form-communication form div button {
-    padding: 10px 25px;
     float: right;
-    font-size: 17px;
-    font-weight: 600;
     border: 2px solid #4290e0;
+    position: relative;
+    padding: 10px 30px;
+    font-size: 18px;
+    font-weight: 500;
+    color: #2d2d2d;
+    background-color: rgba(0, 0, 0, 0);
+    background-image: linear-gradient(135deg, #f1d14e 50%, transparent 50%);
+    background-position: 100%;
+    background-size: 400%;
+    transition: background 400ms ease-in-out;
+}
+
+.container-form-communication form div button:hover {
+    background-position: 0;    
 }
 
 
-
-/* © */
+/* ссылки на мессенджеры для связи */
 .footer-section-2 {
     display: flex;
     justify-content: space-between;

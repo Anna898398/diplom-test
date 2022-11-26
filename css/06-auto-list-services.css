@@ -50,14 +50,13 @@
     background-image: linear-gradient(135deg, #f1d14e 50%, transparent 50%);
     background-position: 100%;
     background-size: 400%;
-    transition: background 300ms ease-in-out;
+    transition: background 400ms ease-in-out;
    
 }
 
 .title-col-1 button:hover {
     color: rgba(0, 0, 0, 0.925);    
-    background-position: 0;
-    
+    background-position: 0;    
 }
 
 

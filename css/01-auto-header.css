@@ -14,7 +14,7 @@ header {
     grid-template-columns: 300px auto;
     grid-template-rows: 60px 60px 60px;
     width: 100%;
-    padding: 0 100px;
+    padding: 0 70px 0 100px;
     position: absolute;
     z-index: 1;
 }
@@ -170,6 +170,9 @@ header .container-header-lower {
     width: 100%;
     height: 100%;
     padding: 0 20px;
+   /*  position: sticky;
+    top: 0;
+    z-index: 10; */
 }
 
 header nav {    
@@ -192,7 +195,7 @@ header nav .active-link {
 header nav .link a {
     text-decoration: none;
     color: #292929;
-    font-size: 15px;
+    font-size: 13px;
     font-weight: 600;
 }
 

@@ -9,10 +9,15 @@
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.0/jquery.validate.min.js"></script>
 
-		<!-- bootstrap -->
-		<link rel="stylesheet" href="bootstrap-5.1.3-dist/css/bootstrap.min.css">
+		<!-- подключение стилевого файла фреймворка bootstrap -->
+<!-- 		<link rel="canonical" href="https://getbootstrap.com/docs/5.0/examples/carousel/">
+		<link href="carousel.css" rel="stylesheet"> -->
+		
+		<!-- Bootstrap core CSS -->
+		<link rel="stylesheet" href="examples/libs/bootstrap-4/bootstrap.min.css">
+		<link href="../assets/dist/css/bootstrap.min.css" rel="stylesheet">
+		<link rel="stylesheet" href="bootstrap-5.1.3/css/bootstrap.min.css">
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-		<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
 	
 		<!-- fonts шрифты -->
 		<link rel="stylesheet" href="fonts/css/all.min.css">
@@ -37,18 +42,135 @@
 		<link rel="stylesheet" href="css/10-auto-send-form.css">
 		<link rel="stylesheet" href="css/11-auto-promo.css">
 		<link rel="stylesheet" href="css/12-auto-footer.css">
+		<link rel="stylesheet" href="css/modal-window.css">
         <!-- <link rel="stylesheet" href="css/container-fix-element.css"> -->
 
 		<title>Авто Мастер</title>
+
+		<style>
+			.imdiz-overlay{
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0,0,0,.6);
+	position: absolute;
+	top: 0;
+	left: 0;
+        z-index: 99;
+        transition: all .3s;
+        visibility: hidden;
+        opacity: 0;
+}
+.imdiz-modal{
+    width: 400px;
+    height: 400px;
+    position: fixed;
+    z-index: 100;
+    left: 50%;
+    margin-left: -200px;
+    top: 50%;
+    margin-top: -200px;
+    background-color: #fff;
+    transition: all .3s;
+    visibility: hidden;
+    opacity: 0;
+}
+.imdiz-close{
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    top: -18px;
+    right: -35px;
+    cursor: pointer;
+}
+.imdiz-close:before, .imdiz-close:after{
+    position: absolute;
+    content: '';
+    width: 1px;
+    height: 36px;
+    background: #fff;
+}
+.imdiz-close:before {
+    transform: rotate(45deg);
+}
+.imdiz-close:after {
+    transform: rotate(-45deg);
+}
+		</style>
+
+		<style>
+
+		</style>
 	</head>
 
 	<body>	
+
+		<!-- Модальное окно -->
+		<div class="modal-window" id="modalWindow">
+
+			<!-- Содержание в модальном окне -->
+			<div class="modal-content">
+
+				<!-- Header в модальном окне -->
+				<div class="modal-header-box">
+					<div class="box-text">
+						<h2>Запланируйте <span>Автосервисное обслуживание</span></h2>
+						<p>Чтобы записаться на обслуживание, позвоните нам по телефону +7(4912)00-00-00 или заполните форму ниже с вашей информацией.</p>
+					</div>
+
+					<div class="box-blue">
+						<p>Перезвоните Мне</p>
+					</div>
+				</div>
+
+				<!-- Форма ввода в модальном окне -->
+				<div class="modal-form-box row">
+					<div class="col">
+						<h2>Контакты</h2>
+						<input class="custom-file" type="text" placeholder="Ваше имя">
+						<input class="custom-file" type="phon" placeholder="Ваш номер телефона">
+						<input class="custom-file" type="email" placeholder=" Ваш e-mail">
+					</div>
+
+					<div class="col">
+						<h2>Данные Авто</h2>
+						<input class="custom-file" type="text" placeholder="Марка авто">
+						<input class="custom-file" type="text" placeholder="Модель авто">
+						<input class="custom-file" type="text" placeholder="Год авто">
+					</div>
+
+					<div class="col">
+						<h2>Информация</h2>
+						<input class="custom-file" type="date" placeholder="">
+						<input class="custom-file" type="time" placeholder="">
+						<input class="custom-file" type="file" placeholder="">
+					</div>
+				</div>
+
+				<!-- Кнопки "Оттправить" и "Закрыть" в модальном окне -->
+				<div class="modal-btn-box row">
+					<div class="col-7">
+						<p>Обратите, пожалуйста, внимание, что запрошенные Вами дата и время могут быть недоступны.</p>
+					</div>
+
+					<div class="col-2">
+						<button>ОТПРАВИТЬ</button>
+					</div>
+
+					<div class="col-2">
+						<button class="close">ЗАКРЫТЬ</button>
+					</div>
+				</div>
+			</div>
+
+		</div>
+
+		
         
         <!-- 01 Header -->
         <header>			
 			<!-- блок для логотипа -->
 			<div class="container-header-img row">
-				<img src="icons/logo-blue1.png" alt="">
+				<img src="icons/logo-blue1.png" alt="car-brand">
 				<h1>Авто Мастер</h1>
 				<p>АВТОСЕРВИС | ШИНОМОНТАЖ</p>
 			</div>
@@ -64,7 +186,7 @@
 				</div>
 
 				<div class="header-btn">
-					<button>Перезвоните Мне</button>
+					<button id="headerBtn" type="button" data-toggle="modal" data-target="#exampleModalCenter">Перезвоните Мне</button>
 				</div>
 			</div>
 
@@ -86,29 +208,45 @@
 				<nav class="navbar-dark">
 
 					<div class="link active-link">
-						<a class="nav-link active" href="#services">НАШИ УСЛУГИ</a>
+						<a class="nav-link active" href="#containerSlider">ГЛАВНАЯ</a>
 					</div>
 
 					<div class="link">
-						<a class="nav-link" href="#gallery">НАШИ РАБОТЫ</a>
+						<a class="nav-link" href="#containerServices">ОСНОВНЫЕ УСЛУГИ</a>
 					</div>
 
 					<div class="link">
-						<a class="nav-link" href="#repair">О РЕМОНТЕ</a>
+						<a class="nav-link" href="#containerListServices">ВСЕ УСЛУГИ</a>
 					</div>
 
 					<div class="link">
-						<a class="nav-link" href="statistics.html">О НАС</a>
+						<a class="nav-link" href="#containerStatistics">СТАТИСТИКА</a>
+					</div>
+
+					<div class="link">
+						<a class="nav-link" href="#containerWorks">НАШИ РАБОТЫ</a>
+					</div>
+
+					<div class="link">
+						<a class="nav-link" href="#containerAbout">О НАС</a>
+					</div>
+
+					<div class="link">
+						<a class="nav-link" href="#promo">АКЦИИ</a>
+					</div>
+
+					<div class="link">
+						<a class="nav-link" href="#contact">КОНТАКТЫ</a>
 					</div>
 
 				</nav>
 			</div>
 		</header>
-
+		
 
 
         <!-- 02 Слайдер с информацией об услугах с фоном-картинкой -->
-		<div class="container-slider-background">
+		<div class="container-slider-background" id="containerSlider">
 			<input checked type="radio" name="slider" id="slide1" />
 	
 			<input type="radio" name="slider" id="slide2" />
@@ -154,7 +292,7 @@
 				<label for="slide2"></label>
 				<label for="slide3"></label>
 			</div>	
-		</div>
+		</div>		
 
 
 
@@ -175,15 +313,15 @@
 				</li>
 
 				<li class="btn-evaluate-repairs">
-					<button>Оценить ремонт</button>
+					<button id="headerBtn" type="button" data-toggle="modal" data-target="#exampleModalCenter">Оценить ремонт</button>
 				</li>
 			</ul>
-		</div>
+		</div>	
 
 
 
         <!-- 04 Таблица с основным перечнем услуг и фото -->
-		<div class="container-services">
+		<div class="container-services" id="containerServices">
 			<h1>Что мы делаем?</h1>
 			<p>Основные услуги, которые мы выполняем</p>			
 
@@ -315,8 +453,8 @@
 
 
         <!-- 06 Полный перечень услуг -->
-		<!-- фон картинка не подвижная -->
-		<div class="container-list-services" style="background-image: url(icons/backgraund.jpg);">
+		<!-- фон картинка неподвижная -->
+		<div class="container-list-services" id="containerListServices" style="background-image: url(icons/backgraund.jpg);">
 			<div class="list-item">	
 				
 				<!-- 1 столбец с заголовком -->
@@ -332,7 +470,11 @@
 
 					<p>Мы предоставляем полный спектр услуг по ремонту любой части кузова для всех марок и моделей автомобилей, независимо от причины. Это включает в себя все, от стоек, амортизаторов и концов рулевых тяг до шаровых шарниров, пружин и в основном всего, что входит в ремонт всей части автомобиля.</p>
 				
-					<button>СВЯЗАТЬСЯ с нами</button>
+					<div class="btn-evaluate-repairs">
+						<button>СВЯЗАТЬСЯ с нами</button>
+					</div>
+
+					<!-- <button>СВЯЗАТЬСЯ с нами</button> -->
 				</div>
 				
 
@@ -376,7 +518,7 @@
 
 
 		<!-- 07 Статистика, Видео -->
-		<div class="container-video">
+		<div class="container-video" id="containerStatistics">
 			<div class="statistics">
 				<h1>Статистика Ремонта Автомобилей</h1>
 				<p>Наша Техническая статистика по ремонту автомобилей. Независимо от того, приходите ли вы на плановый осмотр, замену масла или ремонт, мы обещаем, что вы будете полностью удовлетворены нашей работой.</p>
@@ -425,7 +567,7 @@
 
 
 		<!-- 08 Наши работы -->
-		<div class="container-gallery-our-works" style="background-image: url(icons/auto_bg-grey.jpg);">
+		<div class="container-gallery-our-works" id="containerWorks" style="background-image: url(icons/auto_bg-grey.jpg);">
 			<h1>Наши <span>Работы</span></h1>
 
 			<p>Посмотрите некоторые наши выполненные работы </p>
@@ -458,7 +600,7 @@
 
 
         <!-- 09 О нас -->	
-        <div class="container-about-us">
+        <div class="container-about-us" id="containerAbout">
             <h1>Почему стоит выбрать именно нас?</h1>
 			<p>Мы объясняем из чего складывается цена на услугу, помогаем подобрать и сэкономить на запчастях</p>
         
@@ -611,7 +753,7 @@
 
 		
 		<!-- 11 Акция -->
-		<div class="promo">
+		<div class="promo" id="promo">
 			<div class="promo-box-1">
 				<div class="promo-img">
 					<img src="icons/auto_02-grey.jpg" alt="">
@@ -655,7 +797,7 @@
 
 
 		<!-- 12 Footer -->
-		<footer>
+		<footer id="contact">
 			<div class="footer-section-1">
 
 				<!-- контактная информация -->
@@ -753,29 +895,40 @@
 				</ul>				
 			</div>
 		</footer>
+
+
+		<button class="imdiz-open">Открыть модальное окно</button>
+
+
+
+		
 		
 		
 
-		<!-- JQuery -->
-		<script src="js/jquery-3.5.1.min.js"></script>
-		<script src="js/jquery.maskedinput.min.js"></script>
+	
+		<!-- подключение скриптового файла библиотеки JQuery, необходимого для работы фреймворка -->
+		<script src="js/scripts/jquery.maskedinput.min.js"></script>
+		<script src="js/scripts/jquery-3.5.1.min.js"></script>
+		<script src="js/scripts/jquery-3.5.1.slim.min.js"></script>
+		<script src="http://code.jquery.com/jquery-3.5.1.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
 
-		<!-- bootstrap -->
+		<!-- подключение скриптового файла фреймворка bootstrap -->
 		<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
-		<script src="bootstrap-5.1.3-dist/js/bootstrap.js"></script>
-		<script src="bootstrap-5.1.3-dist/js/bootstrap.min.js"></script>
+		<script src="bootstrap-5.1.3/js/bootstrap.min.js"></script>		
+		<script defer src="/examples/libs/jquery/jquery-3.6.0.min.js"></script>
+  		<script defer src="/examples/libs/bootstrap-4/bootstrap.bundle.min.js"></script>
+
+		<!-- подключение скриптового файла библиотеки popper, необходимого для работы фреймворка -->
+		<script src="js/scripts/popper.min.js"></script>	
 
 		<!-- fonts шрифты -->
 		<script src="https://use.fontawesome.com/98eb59ceb1.js"></script>
 
 		<!--  Owl Carousel карусель фото  -->
-		<script src="js/owl.carousel.min.js"></script>
+		<script src="js/scripts/owl.carousel.min.js"></script>
 
 		<!-- модальное окно -->
-		<script src="js/modal-window.js"></script>
-
-		<!-- карта -->
-		<script id="ymap_lazy" async="" data-src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A1ad4887964fc2e0a6f07c6246ffe638b138f8baacc8983f9a6a0f401a02e833a&width=1280&height=400&lang=ru_RU&scroll=true"></script>
+		<script src="js/scripts/modal-window.js"></script>
 
 		<!-- js -->
 		<script src="js/auto.js"></script>
@@ -783,6 +936,23 @@
         <script src="js/container-gallery.js"></script>
 		<script src="js/container-fix-element.js"></script>
 		<script src="js/container-send-form.js"></script>
+		<script src="js/scripts/modal-window.js"></script>
+		<script src="../assets/dist/js/bootstrap.bundle.min.js"></script>
 
+		<script>
+			$(document).ready(function(){
+			/*Открыть модальное окно*/
+			$('.imdiz-open').click(function(){
+				$('.imdiz-overlay').css({'visibility': 'visible', 'opacity': 1});
+				$('.imdiz-modal').css({'visibility': 'visible', 'opacity': 1, 'top': '50%'});
+			});
+			/*Закрыть модальное окно*/
+			$('.imdiz-close').click(function(){
+				$('.imdiz-overlay').css({'visibility': 'hidden', 'opacity': 0});
+				$('.imdiz-modal').css({'visibility': 'hidden', 'opacity': 0, 'top': '-1000%'});
+			});
+		});
+		</script>
+		
 	</body>
 </html>
