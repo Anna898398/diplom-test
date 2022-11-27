@@ -10,7 +10,7 @@
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.0/jquery.validate.min.js"></script>
 
 		<!-- подключение стилевого файла фреймворка bootstrap -->
-<!-- 		<link rel="canonical" href="https://getbootstrap.com/docs/5.0/examples/carousel/">
+		<!-- <link rel="canonical" href="https://getbootstrap.com/docs/5.0/examples/carousel/">
 		<link href="carousel.css" rel="stylesheet"> -->
 		
 		<!-- Bootstrap core CSS -->
@@ -43,63 +43,10 @@
 		<link rel="stylesheet" href="css/11-auto-promo.css">
 		<link rel="stylesheet" href="css/12-auto-footer.css">
 		<link rel="stylesheet" href="css/modal-window.css">
+		<link rel="stylesheet" href="css/modal-window-2.css">
         <!-- <link rel="stylesheet" href="css/container-fix-element.css"> -->
 
 		<title>Авто Мастер</title>
-
-		<style>
-			.imdiz-overlay{
-	width: 100%;
-	height: 100%;
-	background-color: rgba(0,0,0,.6);
-	position: absolute;
-	top: 0;
-	left: 0;
-        z-index: 99;
-        transition: all .3s;
-        visibility: hidden;
-        opacity: 0;
-}
-.imdiz-modal{
-    width: 400px;
-    height: 400px;
-    position: fixed;
-    z-index: 100;
-    left: 50%;
-    margin-left: -200px;
-    top: 50%;
-    margin-top: -200px;
-    background-color: #fff;
-    transition: all .3s;
-    visibility: hidden;
-    opacity: 0;
-}
-.imdiz-close{
-    width: 20px;
-    height: 20px;
-    position: absolute;
-    top: -18px;
-    right: -35px;
-    cursor: pointer;
-}
-.imdiz-close:before, .imdiz-close:after{
-    position: absolute;
-    content: '';
-    width: 1px;
-    height: 36px;
-    background: #fff;
-}
-.imdiz-close:before {
-    transform: rotate(45deg);
-}
-.imdiz-close:after {
-    transform: rotate(-45deg);
-}
-		</style>
-
-		<style>
-
-		</style>
 	</head>
 
 	<body>	
@@ -576,22 +523,34 @@
 
 				<div class="photo-box">
 					<div>1</div>
-					<img src="icons/auto_01-grey.jpg" alt="">
+
+					<a href="slides-1-painting-works.html">
+						<img  src="icons/painting-01-grey.jpg" alt="painting" onmouseout="this.src='icons/painting-01-grey.jpg'" onmouseover="this.src='icons/painting-01.jpg'" >
+					</a>
 				</div>
 
 				<div class="photo-box">
 					<div>2</div>
-					<img src="icons/auto_02-grey.jpg" alt="">
+
+					<a href="slides-2-locksmith-work.html">
+						<img src="icons/locksmith-work-1-grey.jpg" alt="locksmith" onmouseout="this.src='icons/locksmith-work-1-grey.jpg'" onmouseover="this.src='icons/locksmith-work-1.jpg'" >
+					</a>
 				</div>
 
 				<div class="photo-box">
 					<div>3</div>
-					<img src="icons/auto_03-grey.jpg" alt="">
+
+					<a href="slides-3-bodywork.html">
+						<img src="icons/bodywork-1-grey.jpg" alt="bodywork" onmouseout="this.src='icons/bodywork-1-grey.jpg'" onmouseover="this.src='icons/bodywork-1.jpg'" >
+					</a>
 				</div>
 				
 				<div class="photo-box">
 					<div>4</div>
-					<img src="icons/auto_05-grey.jpg" alt="">
+					
+					<a href="slides-4-polishing-car.html">
+						<img src="icons/polishing-1-grey.jpg" alt="polishing" onmouseout="this.src='icons/polishing-1-grey.jpg'" onmouseover="this.src='icons/polishing-1.jpg'" >
+					</a>
 				</div>
 
 			</div>
@@ -756,7 +715,7 @@
 		<div class="promo" id="promo">
 			<div class="promo-box-1">
 				<div class="promo-img">
-					<img src="icons/auto_02-grey.jpg" alt="">
+					<img src="icons/locksmith-work-1-grey.jpg" alt="">
 				</div>
 
 				<div class="promo-text">
@@ -894,15 +853,7 @@
 					</li>					
 				</ul>				
 			</div>
-		</footer>
-
-
-		<button class="imdiz-open">Открыть модальное окно</button>
-
-
-
-		
-		
+		</footer>	
 		
 
 	
@@ -929,6 +880,7 @@
 
 		<!-- модальное окно -->
 		<script src="js/scripts/modal-window.js"></script>
+		<script src="js/scripts/modal-window-2.js"></script>
 
 		<!-- js -->
 		<script src="js/auto.js"></script>
@@ -938,21 +890,6 @@
 		<script src="js/container-send-form.js"></script>
 		<script src="js/scripts/modal-window.js"></script>
 		<script src="../assets/dist/js/bootstrap.bundle.min.js"></script>
-
-		<script>
-			$(document).ready(function(){
-			/*Открыть модальное окно*/
-			$('.imdiz-open').click(function(){
-				$('.imdiz-overlay').css({'visibility': 'visible', 'opacity': 1});
-				$('.imdiz-modal').css({'visibility': 'visible', 'opacity': 1, 'top': '50%'});
-			});
-			/*Закрыть модальное окно*/
-			$('.imdiz-close').click(function(){
-				$('.imdiz-overlay').css({'visibility': 'hidden', 'opacity': 0});
-				$('.imdiz-modal').css({'visibility': 'hidden', 'opacity': 0, 'top': '-1000%'});
-			});
-		});
-		</script>
 		
 	</body>
 </html>
