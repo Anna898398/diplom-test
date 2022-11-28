@@ -1,35 +1,35 @@
-/* оценить ремонт, форма связи */
-.container-evaluate-repairs {
+/* Заказать звонок */
+.container-send-form {
     background-color: #292929;
     height: 135px;
     padding: 0 70px;
 }
 
-.container-evaluate-repairs ul {
+.container-send-form ul {
     display: flex;
     list-style: none;
 }
 
 
 /* li info Закзать звонок, Форма связи */
-.container-evaluate-repairs .info {
+.container-send-form .info {
     align-self: center;
     position: relative;
     top: -40px;
 }
 
-.container-evaluate-repairs .info .white {
+.container-send-form .info .white {
     color: rgb(255, 255, 255);
 }
 
-.container-evaluate-repairs .info .blue {
+.container-send-form .info .blue {
     color: #4290e0;
     margin-left: 70px;
 }
 
 
 /* li text описание */
-.container-evaluate-repairs .text {
+.container-send-form .text {
     width: 30%;
     margin: 0 0 0 50px;
     align-self: center;
@@ -37,7 +37,7 @@
     top: -30px;
 }
 
-.container-evaluate-repairs .text p {
+.container-send-form .text p {
     color: rgb(255, 255, 255);
     font-size: 15px;
     line-height: 25px;
@@ -45,12 +45,12 @@
 
 
 /* li banner картинка-баннер ключ авто */
-.container-evaluate-repairs .banner {
+.container-send-form .banner {
     width: 200px;
     align-self: center;
 }
 
-.container-evaluate-repairs .banner img {
+.container-send-form .banner img {
     width: 150%;
     position: relative;
     top: -30px;
@@ -58,7 +58,7 @@
 
 
 /* li btn кнопка Оценить ремонт */
-.container-evaluate-repairs .btn-evaluate-repairs button {
+.container-send-form .btn-send-form button {
     border: 2px solid #4290e0;
     position: relative;
     left: 100px;
@@ -75,7 +75,7 @@
    
 }
 
-.container-evaluate-repairs .btn-evaluate-repairs button:hover {
+.container-send-form .btn-send-form button:hover {
     color: rgba(0, 0, 0, 0.925);    
     background-position: 0;
 }

@@ -1,22 +1,22 @@
-/* 10 Отправка формы состояния автомобиля */
-.container-send-form {
+/* 10 Оценка состояния автомобиля */
+.container-evaluate-repairs {
     width: 100%;
     padding: 50px 70px 70px 70px;
     background-color: #292929;
     text-align: center;
 }
 
-.container-send-form h1 {
+.container-evaluate-repairs h1 {
     font-size: 40px;
     font-weight: 700;
     color: rgb(255, 255, 255);
 }
 
-.container-send-form span {
+.container-evaluate-repairs span {
     color: #4290e0;
 }
 
-.container-send-form p {
+.container-evaluate-repairs p {
     font-size: 17px;
     color: rgb(255, 255, 255);
     margin-bottom: 50px;
@@ -56,7 +56,8 @@
     cursor: pointer;    
     padding: 0;
     margin-right: 20px;
-    font-size: 15px;   
+    font-size: 15px;
+    overflow: hidden;   
 }
 
 .form-box .box-file:hover {
