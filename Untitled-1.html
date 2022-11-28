@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Малярные работы</title>
+
+    <!-- подключение стилевого файла фреймворка bootstrap -->
+    <link rel="stylesheet" href="bootstrap-5.1.3/css/bootstrap.min-5.css">
+    <link rel="stylesheet" href="css/slides-gallery.css">
+    <link rel="stylesheet" href="css/modal-window-1.css">
+</head>
+<body>    
+    
+   
+    <div class="open-modal">Открыть попап</div>    
+    
+    <div class="modal-window">
+        <form class="modal-window-form">
+            <svg class="close-modal">
+                <path fill="#2982ff" d="M23.954 21.03l-9.184-9.095 9.092-9.174-2.832-2.807-9.09 9.179-9.176-9.088-2.81 2.81 9.186 9.105-9.095 9.184 2.81 2.81 9.112-9.192 9.18 9.1z"/>
+            </svg>    
+        </form>
+    </div>  
+
+  
+  
+    <!-- подключение скриптового файла библиотеки jquery, необходимого для работы фреймворка -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+
+    <!-- подключение скриптового файла библиотеки popper, необходимого для работы фреймворка -->
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
+
+    <!-- подключение скриптового файла фреймворка bootstrap -->
+    <script src="bootstrap-5.1.3/js/bootstrap.min-5.js"></script>
+
+    <script>
+        $('body').scrollspy({ target: '#navbarnav' })
+    </script>
+
+    <script src="js/scripts/modal-window-1.js"></script>
+</body>
+</html>
