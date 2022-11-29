@@ -12,24 +12,28 @@
 
 
 /* li info Закзать звонок, Форма связи */
-.container-send-form .info {
+.send-form-info {
     align-self: center;
     position: relative;
-    top: -40px;
+    top: -35px;
 }
 
-.container-send-form .info .white {
+.send-form-info h1 {
+    line-height: 30px;
+}
+
+.info-text-white {
     color: rgb(255, 255, 255);
 }
 
-.container-send-form .info .blue {
+.info-text-blue {
     color: #4290e0;
     margin-left: 70px;
 }
 
 
 /* li text описание */
-.container-send-form .text {
+.send-form-text {
     width: 30%;
     margin: 0 0 0 50px;
     align-self: center;
@@ -37,7 +41,7 @@
     top: -30px;
 }
 
-.container-send-form .text p {
+.send-form-text p {
     color: rgb(255, 255, 255);
     font-size: 15px;
     line-height: 25px;
@@ -45,12 +49,12 @@
 
 
 /* li banner картинка-баннер ключ авто */
-.container-send-form .banner {
+.send-form-banner {
     width: 200px;
     align-self: center;
 }
 
-.container-send-form .banner img {
+.send-form-banner img {
     width: 150%;
     position: relative;
     top: -30px;
@@ -58,7 +62,7 @@
 
 
 /* li btn кнопка Оценить ремонт */
-.container-send-form .btn-send-form button {
+.send-form-btn button {
     border: 2px solid #4290e0;
     position: relative;
     left: 100px;
@@ -75,7 +79,7 @@
    
 }
 
-.container-send-form .btn-send-form button:hover {
+.send-form-btn button:hover {
     color: rgba(0, 0, 0, 0.925);    
     background-position: 0;
 }

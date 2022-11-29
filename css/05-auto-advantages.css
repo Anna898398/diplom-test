@@ -21,14 +21,14 @@
     display: flex;
 }
 
-.advantage-1,
-.advantage-2,
-.advantage-3 {
+.advantage-box-1,
+.advantage-box-2,
+.advantage-box-3 {
     display: flex;
     margin-top: 30px;
 }
 
-.advantages .img {
+.advantage-box-img {
     width: 180px;
     height: 60px;
     border-right: 3px solid #4290e0;
@@ -36,21 +36,21 @@
     padding-right: 15px;
 }
 
-.advantages .img img {
+.advantage-box-img img {
     width: 100%;
 }
 
-.advantages .text {
+.advantage-box-text {
     margin: 0 20px 0 0;
 }
 
-.advantages .text h3 {
+.advantage-box-text h3 {
     font-size: 22px;
     font-weight: 700;
     text-align: left;
 }
 
-.advantages .text p {
+.advantage-box-text p {
     font-size: 15px;
     text-align: left;
 }

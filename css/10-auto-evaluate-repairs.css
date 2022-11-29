@@ -22,18 +22,27 @@
     margin-bottom: 50px;
 }
 
-.form-box {
+.container-evaluate-repairs form {
     width: 100%;
     height: 50px;
+}
+
+.container-evaluate-repairs form input {
+    width: 100%;
+    height: 100%;
+    border: none;
+    padding: 10px;
+    text-align: center;
+    cursor: pointer;        
 }
 
 
 /* категория авто */
 /* марка авто */
 /* год выпуска авто */
-.form-box .box-category,
-.form-box .box-brand,
-.form-box .box-range {
+.form-category,
+.form-brand,
+.form-range {
     height: 100%;
     border: 2px solid #ebebeb;
     cursor: pointer;    
@@ -42,15 +51,15 @@
     font-size: 17px;
 } 
 
-.form-box .box-category:hover,
-.form-box .box-brand:hover,
-.form-box .box-range:hover {
+.form-category:hover,
+.form-brand:hover,
+.form-range:hover {
     border: 2px solid #4290e0;
 }
 
 
 /* добавить файл */
-.form-box .box-file {
+.form-file {
     height: 100%;
     border: 2px solid #ebebeb;
     cursor: pointer;    
@@ -58,33 +67,23 @@
     margin-right: 20px;
     font-size: 15px;
     overflow: hidden;   
+    background-color: #ffffff;
 }
 
-.form-box .box-file:hover {
+.form-file:hover {
     border: 2px solid #4290e0;
 }
 
-.form-box form {
-    background-color: #ffffff; 
-}
 
-.form-box input {
-    width: 100%;
-    height: 100%;
-    border: none;
-    padding: 10px;
-    text-align: center;
-    cursor: pointer;
-        
-}
+
 
 
 /* кнопка отправки данных */
-.form-box .btn-send {
+.form-btn-send {
     height: 100%;
 }
 
-.form-box .btn-send button {
+.form-btn-send button {
     border: 2px solid #4290e0;
     position: relative;
     padding: 10px 30px;
@@ -98,7 +97,7 @@
     transition: background 400ms ease-in-out;
 }
 
-.form-box .btn-send button:hover {
+.form-btn-send button:hover {
     color: rgba(0, 0, 0, 0.925);    
     background-position: 0;    
 }

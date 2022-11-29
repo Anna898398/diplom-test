@@ -1,7 +1,7 @@
 /* Наши работы */
 .container-gallery-our-works {
     padding: 50px 10px 70px 25px;
-    background-image: url(icons/auto_bg-grey.jpg);
+    /* background-image: url(icons/auto_bg-grey.jpg); */
     background-repeat: no-repeat;
     background-position: center, center;
     background-size: auto 100%;

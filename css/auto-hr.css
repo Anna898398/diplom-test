@@ -1,9 +1,7 @@
 /* стилизация линии типа <hr> */
-.line {
+.container-line {
     display: flex;
-    margin: auto;
-    /* text-align: center; */
-    margin-bottom: 50px;
+    margin: 0 auto;
 }
 
 .line-long {

@@ -13,7 +13,7 @@
 
 .container-services p {
     font-size: 20px;
-    margin-bottom: 30px;
+    margin-bottom: 40px;
 }
 
 
@@ -22,7 +22,7 @@
     display: grid;
     grid-template-columns: 400px 400px 400px;
     grid-template-rows: 400px 400px 400px;
-    margin: auto;
+    margin: 50px auto 0 auto;
 }
 
 .container-box img {
@@ -37,24 +37,24 @@
 
 /* таблица с перечнем услуг */
 /* 1 квадрат-текст "Сервис" blue */
-.box1 {
+.box-text-1 {
     background-color: #4290e0;
     cursor: pointer;
     width: 100%;
     height: 100%;
 }
 
-.box1 h2 {
+.box-text-1 h2 {
     font-size: 30px;
     margin: 95px 0 20px 0;
 }
 
-.box1 p {
+.box-text-1 p {
     font-size: 17px;
     margin: 0 30px;
 }
 
-.box1 h1 {
+.box-text-1 h1 {
     font-size: 120px;
     color: #ffffff2a;
     position: relative;
@@ -65,24 +65,24 @@
 
 
 /* 3 квадрат-текст "Мастер" grey */
-.box3 {
+.box-text-2 {
     background-color: #ebebeb;
     cursor: pointer;
     width: 100%;
     height: 100%;
 }
 
-.box3 h2 {
+.box-text-2 h2 {
     font-size: 30px;
     margin: 95px 0 20px 0;
 }
 
-.box3 p {
+.box-text-2 p {
     font-size: 17px;
     margin: 0 30px;
 }
 
-.box3 h1 {
+.box-text-2 h1 {
     font-size: 120px;
     color: #00000011;
     position: relative;
@@ -93,26 +93,26 @@
 
 
 /* 5 квадрат-текст "Авто" black */
-.box5 {
+.box-text-3 {
     background-color: #292929;
     cursor: pointer;
     width: 100%;
     height: 100%;
 }
 
-.box5 h2 {
+.box-text-3 h2 {
     font-size: 30px;
     margin: 95px 0 20px 0;
     color: #4290e0;
 }
 
-.box5 p {
+.box-text-3 p {
     font-size: 17px;
     margin: 0 30px;
     color: #ffffff;
 }
 
-.box5 h1 {
+.box-text-3 h1 {
     font-size: 120px;
     color: #ffffff0a;
     position: relative;
@@ -123,24 +123,24 @@
 
 
 /* 7 квадрат-текст "Шино" grey */
-.box7 {
+.box-text-4 {
     background-color: #ebebeb;
     cursor: pointer;
     width: 100%;
     height: 100%;
 }
 
-.box7 h2 {
+.box-text-4 h2 {
     font-size: 30px;
     margin: 95px 0 20px 0;
 }
 
-.box7 p {
+.box-text-4 p {
     font-size: 17px;
     margin: 0 30px;
 }
 
-.box7 h1 {
+.box-text-4 h1 {
     font-size: 120px;
     color: #00000011;
     position: relative;
@@ -150,24 +150,24 @@
 }
 
 /* 9 квадрат-текст "Монтаж" blue */
-.box9 {
+.box-text-5 {
     background-color: #4290e0;
     cursor: pointer;
     width: 100%;
     height: 100%;
 }
 
-.box9 h2 {
+.box-text-5 h2 {
     font-size: 30px;
     margin: 95px 0 20px 0;
 }
 
-.box9 p {
+.box-text-5 p {
     font-size: 17px;
     margin: 0 30px;
 }
 
-.box9 h1 {
+.box-text-5 h1 {
     font-size: 120px;
     color: #ffffff2a;
     position: relative;
@@ -192,11 +192,11 @@
     text-align: center;
 }
 
-.box1:hover .hover-text,
-.box3:hover .hover-text,
-.box5:hover .hover-text,
-.box7:hover .hover-text,
-.box9:hover .hover-text {
+.box-text-1:hover .hover-text,
+.box-text-2:hover .hover-text,
+.box-text-3:hover .hover-text,
+.box-text-4:hover .hover-text,
+.box-text-5:hover .hover-text {
     visibility: visible;
     transition: 1s;
     transform: translatey(-160px);
@@ -204,20 +204,20 @@
     height: 100%;
 }
 
-.box1:hover,
-.box3:hover,
-.box5:hover,
-.box7:hover,
-.box9:hover {
+.box-text-1:hover,
+.box-text-2:hover,
+.box-text-3:hover,
+.box-text-4:hover,
+.box-text-5:hover {
     filter: sepia(50%);
     transition: 0.6s;
 }
 
 
 /* квадрат-фото увеличивается при наведении на него */
-.box2:hover img,
-.box4:hover img,
-.box6:hover img,
-.box8:hover img {
+.box-img-1:hover img,
+.box-img-2:hover img,
+.box-img-3:hover img,
+.box-img-4:hover img {
     transform: scale(1.5);
 }

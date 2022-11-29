@@ -15,12 +15,12 @@
 
 
 /* 1 столбец с заголовком */
-.title-col-1 {
+.item-col-1 {
     width: 45%; 
     padding: 100px 30px 100px 0;   
 }
 
-.title-col-1 h1 {
+.item-col-1 h1 {
     color: #ffffff;
     font-family: 'Times New Roman', Times, serif;
     font-size: 40px;
@@ -28,16 +28,16 @@
     margin: 0 0 50px 0;
 }
 
-.title-col-1 span {
+.item-col-1 span {
     color: #4290e0;
 }
 
-.title-col-1 p {
+.item-col-1 p {
     color: #ffffff;
     font-size: 16px;
 }
 
-.title-col-1 button {
+.item-col-1 button {
     border: 2px solid #4290e0;
     position: relative;
     left: 0;
@@ -54,15 +54,15 @@
    
 }
 
-.title-col-1 button:hover {
+.item-col-1 button:hover {
     color: rgba(0, 0, 0, 0.925);    
     background-position: 0;    
 }
 
 
 /* 2 и 3 столбцы с перечнем услуг */
-.list-col-2,
-.list-col-3 {
+.item-col-2,
+.item-col-3 {
     width: 30%; 
     padding: 100px 0;
     color: #ffffff;    
@@ -82,7 +82,7 @@ ol > li {
 ol > li:before {
     content: '✓';
     position: absolute; 
-    top: 0; 
+    top: -5px; 
     left: 0;
     color: #4290e0;
     font-weight: 900;
@@ -91,7 +91,7 @@ ol > li:before {
 
 
 /* стилизация h1 как фон */
-.h-background {
+.list-item-h1-background {
     color: rgba(255, 255, 255, 0.027);
     font-size: 150px;
     font-weight: 700;

@@ -1,61 +1,61 @@
 /* 07 Статистика, Видео */
-.container-video {
+.container-statistics-and-video {
     display: flex;
     height: 650px;
     align-items: center;
     padding: 0 70px;
 }
 
-.statistics {
+.content-box {
     width: 65%;
 }
 
-.statistics h1 {
+.content-box h1 {
     font-size: 40px;
     font-weight: 700;
     margin-bottom: 20px;
     transform: scale(1, 1.1);
 }
 
-.statistics p {
+.content-box p {
     font-size: 17px;
     margin-bottom: 30px;
 }
 
 /* Статистика */
-.content-box {
+.statistics-box {
     display: grid;
     grid-template-columns: 50% 50%;
     grid-template-rows: 50% 50%;
     gap: 20px;
 }
 
-.content-box .info {
+.statistics-box-info {
     display: flex;
     align-items: center;
     overflow: hidden;
     align-items: center;
 }
 
-.content-box .info span {
+.statistics-box-info span {
     color: #4290e0;
     font-size: 55px;
     font-weight: 700;
     margin-right: 20px;
 }
 
-.content-box .info .ed-k { 
+.statistics-box-info span .small-letter-k { 
     color: #4290e0;
     font-size: 43px;
     font-weight: 700;
 }
 
-.content-box .info p {
+.statistics-box-info p {
     font-size: 20px;
     font-weight: 700;
 }
 
-.content-box .info div {
+.statistics-box-info div {
     border-left: 3px solid #4290e0;
     font-size: 20px;
     font-weight: 500;
