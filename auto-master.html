@@ -29,6 +29,7 @@
         <link rel="stylesheet" href="css/container-fix-element.css">
 		<link rel="stylesheet" href="css/modal-window-send.css">
 		<link rel="stylesheet" href="css/modal-window-item.css">
+		<link rel="stylesheet" href="css/modal-window-chat.css">
 
 		<title>Авто Мастер</title>
 	</head>
@@ -788,7 +789,7 @@
 		<!-- Фиксированные кнопки обратной связи и "вверх" -->
 		<div class="container-fix-element">
 			<div class="btn-contact">
-				<input type="image" src='icons/icons-chat-white.png' />
+				<input class="btn-open-modal-window-messengers" type="image" src='icons/icons-chat-white.png' />
 			</div>
 
 			<div class="btn-up">
@@ -915,6 +916,29 @@
 
 
 
+		<!-- Модальное окно для Фиксированные кнопки обратной связи --> 
+		<div class="modal-window-chat">
+
+			<!-- HTML код модального окна -->
+			<div class="modal-window-messengers">						
+				<div>
+					<img src="icons/whatsapp-64x64.png" alt="whatsapp">
+				</div>
+
+				<div>
+					<img src="icons/viber-64x64.png" alt="viber">
+				</div>
+
+				<div>
+					<img src="icons/telegram-64x64.png" alt="telegram">
+				</div>
+				
+				<button class="btn-close-modal-window-messengers btn">ЗАКРЫТЬ</button>
+			</div>		
+		</div>
+
+
+
 
 
 		<!-- bootstrap - подключение скриптового файла фреймворка -->
@@ -947,6 +971,7 @@
 		<script src="js/container-send-form.js"></script>
 		<script src="js/modal-window-send.js"></script>
 		<script src="js/modal-window-item.js"></script>
+		<script src="js/modal-window-chat.js"></script>
 		
 	</body>
 </html>
