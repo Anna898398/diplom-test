@@ -191,7 +191,7 @@ header {
 
 
 
-@media screen and (min-width: 1601px) {
+@media screen and (min-width: 1651px) /* and (min-width: 2500px) */ {
 
         * {
         box-sizing: border-box;
@@ -200,12 +200,13 @@ header {
     body {
         font-family: 'Poppins', sans-serif;
         color: #292929;
-        min-width: 1601px;
+        min-width: 1651px;
+        max-width: 2500px;
     }
 
     header {
         width: 100%;
-        padding: 0 200px;
+        padding: 0 10rem;
         position: absolute;
         z-index: 1;
     }
@@ -223,7 +224,7 @@ header {
         background-color: #2d2d2d;;
         width: 400px;
         height: 100%;
-        padding: 25px 30px 35px 20px;
+        padding: 25px 40px 35px 30px;
         background: linear-gradient(-125deg, transparent 35px, #2d2d2d 0);
         overflow: hidden;
     }
@@ -257,20 +258,35 @@ header {
     }
 
     .row-upper-worktime-adress {
-        padding: 20px 0 0 60px;
+        display: flex;
+        padding: 0 30px;
         height: 100%;
         text-align: left; 
         flex-grow: 1;   
+        /* color: #ffffff;
+        font-size: 15px;
+        font-weight: 500;
+        transform: scale(1.2, 1.2);  */
+    }
+
+    .row-upper-worktime-adress p {
         color: #ffffff;
-        font-size: 18px;
+        font-size: 13px;
         font-weight: 500;
         transform: scale(1.2, 1.2); 
+        position: relative;
+        top: 30px;
+        left: 70px;
     }
 
     .row-upper-worktime-adress span {
         color: #4290e0;
-        margin: 0 40px 0 10px;
+        margin-left: 10px;
         font-weight: 600;
+    }
+
+    .row-upper-worktime-adress .p-worktime {
+        margin-right: 40px;
     }
 
     .row-upper-btn {
@@ -316,7 +332,7 @@ header {
         display: flex;
         align-items: center;
         padding: 15px 0 0 10px;
-        font-size: 20px;
+        font-size: 17px;
     }
 
     .row-lower-text a {
@@ -328,7 +344,7 @@ header {
         padding-top: 15px;
         margin-right: 30px;
         width: 270px;
-        font-size: 28px;
+        font-size: 27px;
         font-weight: 600;
         text-align: right;
     }
