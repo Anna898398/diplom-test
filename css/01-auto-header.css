@@ -83,6 +83,7 @@ header {
     width: 280px;
     padding-left: 25px;
     background: linear-gradient(55deg, transparent 40px, #4290e0 0);
+    border: none;
 }
 
 .row-upper-btn:hover {
