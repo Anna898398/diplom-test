@@ -53,7 +53,7 @@ footer {
 
 /* Форма обратной связи */
 .container-form-communication {
-    padding: 50px 0;
+    padding: 50px 5px;
 }
 
 .container-form-communication h1 {
@@ -72,12 +72,12 @@ footer {
     display: block;
 }
 
-.container-form-communication form #yourName,
-.container-form-communication form #yourPhone,
-.container-form-communication form #yourEmail {
+.container-form-communication form #name,
+.container-form-communication form #phone,
+.container-form-communication form #email {
     width: 100%;
     height: 50px;
-    margin-bottom: 20px;
+    margin-top: 20px;
     font-size: 15px;
     padding-left: 20px;
     border: 1px solid rgb(192, 192, 192);
@@ -86,7 +86,7 @@ footer {
 .container-form-communication form textarea {
     width: 100%;
     height: 150px;
-    margin-bottom: 40px;
+    margin-top: 40px;
     font-size: 15px;
     padding: 20px 0 0 20px;
     border: 1px solid rgb(192, 192, 192);
@@ -100,6 +100,7 @@ footer {
     width: 100%;
     overflow: hidden;
     font-size: 15px;
+    margin-top: 30px;
 }
 
 .container-checkbox input {
@@ -128,6 +129,12 @@ footer {
 
 .container-checkbox button:hover {
     background-position: 0;    
+}
+
+
+/* Валидация */
+.container-form-communication form .error {
+    color: #ff1e44;
 }
 
 
